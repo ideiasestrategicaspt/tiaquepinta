@@ -53,7 +53,7 @@ const HeroSection = () => {
                 href={WHATSAPP_FESTA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-cta btn-cta-lg btn-cta-mobile"
+                className="btn-secondary btn-secondary-lg btn-cta-mobile"
               >
                 🎉 Quero contratar para festa
               </a>
