@@ -73,11 +73,12 @@ const PlansSection = () => {
             "bg-white shadow-card"}`
             }>
             
-              {plan.featured &&
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-1.5 rounded-full font-display text-sm font-bold flex items-center gap-1.5 shadow-button">
-                  <Star className="w-4 h-4 fill-white" /> Mais Popular
+              {plan.featured && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-1.5 rounded-full font-display text-sm font-bold flex items-center gap-1.5 shadow-button">
+                  <Star className="w-4 h-4 fill-white" />
+                  {plan.badge || "Mais Popular"}
                 </div>
-            }
+              )}
               
               <h3 className="font-display text-2xl font-bold mb-2 text-foreground">{plan.name}</h3>
               <p className="font-body text-sm mb-4 text-muted-foreground">{plan.access}</p>
