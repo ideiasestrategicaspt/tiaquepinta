@@ -1,5 +1,7 @@
-const PaintSplash = ({ className = "" }: { className?: string }) => (
-  <svg viewBox="0 0 200 200" className={className} xmlns="http://www.w3.org/2000/svg">
+import { CSSProperties } from "react";
+
+const PaintSplash = ({ className = "", style }: { className?: string; style?: CSSProperties }) => (
+  <svg viewBox="0 0 200 200" className={className} style={style} xmlns="http://www.w3.org/2000/svg">
     <path
       d="M 100 20 C 130 20, 170 50, 160 90 C 155 110, 140 120, 150 145 C 155 160, 140 180, 120 175 C 100 170, 95 150, 80 155 C 60 162, 40 150, 35 130 C 30 110, 45 90, 40 70 C 35 45, 65 20, 100 20 Z"
       fill="currentColor"
