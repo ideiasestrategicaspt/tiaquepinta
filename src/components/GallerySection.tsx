@@ -3,10 +3,13 @@ import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
 import gallery3 from "@/assets/gallery-3.jpeg";
 import gallery4 from "@/assets/gallery-4.jpeg";
+import gallery5 from "@/assets/gallery-5.jpeg";
+import gallery6 from "@/assets/gallery-6.jpeg";
+import gallery7 from "@/assets/gallery-7.jpeg";
 import { BrushStroke } from "./PaintEffects";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const images = [gallery1, gallery2, gallery3, gallery4];
+const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7];
 
 const GallerySection = () => {
   const [active, setActive] = useState(0);
