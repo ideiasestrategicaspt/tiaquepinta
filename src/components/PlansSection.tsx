@@ -30,7 +30,7 @@ const plans = [
       "Aulas bônus com novos desenhos e técnicas",
       "Certificado de participação"
     ],
-    badge: "Plano mais escolhido pelas alunas ⭐"
+    badge: "⭐ Plano mais escolhido pelas alunas"
   },
   {
     name: "Curso Vitalício",
