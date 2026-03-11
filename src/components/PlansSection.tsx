@@ -40,7 +40,7 @@ const PlansSection = () => {
             Garanta Seu Acesso ao Método VDPF
           </h2>
           <p className="font-body text-foreground/70 max-w-xl mx-auto">
-            Comece hoje a transformar sua paixão em renda. Todos os planos incluem garantia de 7 dias.
+            Comece hoje a transformar sua paixão em renda. Pagamento via Pix ou cartão em até 12x (com taxas). Todos os planos incluem garantia de 7 dias.
           </p>
         </div>
 
