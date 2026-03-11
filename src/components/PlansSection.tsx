@@ -30,7 +30,7 @@ const plans = [
       "Aulas bônus com novos desenhos e técnicas",
       "Certificado de participação"
     ],
-    badge: "⭐ Plano mais escolhido pelas alunas"
+    badge: "Plano mais escolhido pelas alunas ⭐"
   },
   {
     name: "Curso Vitalício",
@@ -74,8 +74,7 @@ const PlansSection = () => {
             }>
             
               {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-1.5 rounded-full font-display text-sm font-bold flex items-center gap-1.5 shadow-button">
-                  <Star className="w-4 h-4 fill-white" />
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-lg font-display text-sm font-bold shadow-button whitespace-nowrap">
                   {plan.badge || "Mais Popular"}
                 </div>
               )}
