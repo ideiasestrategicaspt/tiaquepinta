@@ -24,7 +24,8 @@
     --muted: 270 20% 94%;
     --muted-foreground: 260 10% 45%;
 
-    --accent: 145 65% 42%;
+    /* Verde vibrante para CTAs - WhatsApp style */
+    --accent: 142 71% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,7 +33,7 @@
 
     --border: 270 20% 90%;
     --input: 270 20% 90%;
-    --ring: 265 70% 55%;
+    --ring: 142 71% 45%;
 
     --radius: 1rem;
 
@@ -42,7 +43,14 @@
     --gradient-warm: linear-gradient(135deg, hsl(300 70% 60%), hsl(265 70% 55%));
     --shadow-card: 0 8px 32px -8px hsl(265 70% 55% / 0.15);
     --shadow-card-hover: 0 16px 48px -12px hsl(265 70% 55% / 0.25);
-    --shadow-button: 0 4px 16px -4px hsl(265 70% 55% / 0.4);
+    --shadow-button: 0 4px 16px -4px hsl(142 71% 45% / 0.4);
+    --shadow-button-hover: 0 8px 24px -4px hsl(142 71% 45% / 0.5);
+
+    /* CTA Button specific tokens */
+    --cta-green: 142 71% 45%;
+    --cta-green-light: 142 71% 55%;
+    --cta-green-glow: 0 0 30px hsl(142 71% 45% / 0.5);
+    --cta-green-glow-hover: 0 0 40px hsl(142 71% 55% / 0.6);
 
     --font-display: 'Baloo 2', cursive;
     --font-body: 'Montserrat', sans-serif;
@@ -89,11 +97,83 @@
     box-shadow: var(--shadow-button);
   }
 
+  .shadow-button-hover {
+    box-shadow: var(--shadow-button-hover);
+  }
+
   .text-gradient {
     background: var(--gradient-hero);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* CTA Button Styles */
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 40%));
+    color: white;
+    box-shadow: 
+      0 4px 20px -4px hsl(142 71% 45% / 0.5),
+      0 0 0 1px hsl(142 71% 55% / 0.3),
+      inset 0 1px 0 hsl(142 71% 60% / 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(142 71% 55%), hsl(142 71% 45%));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-cta:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 
+      0 8px 30px -4px hsl(142 71% 45% / 0.6),
+      0 0 40px hsl(142 71% 55% / 0.4),
+      0 0 0 2px hsl(142 71% 60% / 0.5),
+      inset 0 1px 0 hsl(142 71% 70% / 0.4);
+  }
+
+  .btn-cta:hover::before {
+    opacity: 1;
+  }
+
+  .btn-cta:active {
+    transform: scale(0.98);
+  }
+
+  .btn-cta > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Large CTA for hero */
+  .btn-cta-lg {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+  }
+
+  /* Pulse glow animation */
+  .btn-cta-pulse {
+    animation: cta-pulse 2s ease-in-out infinite;
+  }
+
+  /* Mobile full width */
+  .btn-cta-mobile {
+    @apply w-full sm:w-auto;
   }
 }
 
@@ -109,8 +189,24 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(265 70% 55% / 0.3); }
-  50% { box-shadow: 0 0 40px hsl(265 70% 55% / 0.6); }
+  0%, 100% { box-shadow: 0 0 20px hsl(142 71% 45% / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(142 71% 55% / 0.6); }
+}
+
+@keyframes cta-pulse {
+  0%, 100% { 
+    box-shadow: 
+      0 4px 20px -4px hsl(142 71% 45% / 0.5),
+      0 0 0 1px hsl(142 71% 55% / 0.3),
+      inset 0 1px 0 hsl(142 71% 60% / 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 8px 30px -4px hsl(142 71% 45% / 0.6),
+      0 0 30px hsl(142 71% 55% / 0.4),
+      0 0 0 2px hsl(142 71% 60% / 0.5),
+      inset 0 1px 0 hsl(142 71% 70% / 0.4);
+  }
 }
 
 @keyframes brush-draw {
@@ -136,6 +232,11 @@
   50% { transform: rotate(3deg); }
 }
 
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -159,4 +260,20 @@
 
 .animate-wiggle {
   animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Micro movement on scroll */
+@keyframes micro-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-micro-bounce {
+  animation: micro-bounce 2s ease-in-out infinite;
 }

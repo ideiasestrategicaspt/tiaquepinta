@@ -30,11 +30,11 @@ const HeroSection = () => {
             {/* Social proof */}
             <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
               <div className="flex items-center gap-2 bg-card/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <Users className="w-5 h-5 text-accent" />
+                <Users className="w-5 h-5 text-white" />
                 <span className="font-body text-sm font-semibold text-primary-foreground">+300 alunas formadas</span>
               </div>
               <div className="flex items-center gap-2 bg-card/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <Instagram className="w-5 h-5 text-accent" />
+                <Instagram className="w-5 h-5 text-white" />
                 <span className="font-body text-sm font-semibold text-primary-foreground">+19,6 mil seguidores</span>
               </div>
             </div>
@@ -45,7 +45,7 @@ const HeroSection = () => {
                 href={WHATSAPP_CURSO}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 font-display text-lg font-bold px-8 py-4 rounded-full bg-accent text-accent-foreground shadow-button hover:scale-105 transition-transform"
+                className="btn-cta btn-cta-lg btn-cta-pulse animate-micro-bounce btn-cta-mobile"
               >
                 🎨 Quero aprender pintura facial
               </a>
@@ -53,7 +53,7 @@ const HeroSection = () => {
                 href={WHATSAPP_FESTA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 font-display text-lg font-bold px-8 py-4 rounded-full bg-card text-primary shadow-button hover:scale-105 transition-transform"
+                className="btn-cta btn-cta-lg btn-cta-mobile"
               >
                 🎉 Quero contratar para festa
               </a>
@@ -69,8 +69,8 @@ const HeroSection = () => {
                 alt="Luana Moreira - Tia que Pinta"
                 className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl object-cover border-4 border-card/30 shadow-card"
               />
-              <div className="absolute -bottom-3 -right-3 bg-accent text-accent-foreground rounded-full p-3 shadow-button animate-float">
-                <Star className="w-6 h-6" />
+              <div className="absolute -bottom-3 -right-3 bg-white text-green-600 rounded-full p-3 shadow-button animate-float">
+                <Star className="w-6 h-6 fill-current" />
               </div>
             </div>
           </div>

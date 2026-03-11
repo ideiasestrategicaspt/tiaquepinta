@@ -1,27 +1,33 @@
 import { WHATSAPP_PLANO_BASICO, WHATSAPP_PLANO_ESSENCIAL, WHATSAPP_PLANO_VITALICIO } from "@/lib/whatsapp";
-import { Star } from "lucide-react";
+import { Star, Check } from "lucide-react";
 
 const plans = [
   {
     name: "Curso Básico",
     access: "3 meses de acesso",
     price: "R$ 450",
+    priceNote: "ou 12x de R$ 45",
     link: WHATSAPP_PLANO_BASICO,
     featured: false,
+    features: ["50+ aulas gravadas", "Apostila completa", "Suporte por email"],
   },
   {
     name: "Curso Essencial",
     access: "7 meses de acesso",
     price: "R$ 847",
+    priceNote: "ou 12x de R$ 84,70",
     link: WHATSAPP_PLANO_ESSENCIAL,
     featured: true,
+    features: ["Tudo do Básico", "Grupo VIP WhatsApp", "Aulas bônus", "Certificado"],
   },
   {
     name: "Curso Vitalício",
     access: "Acesso ilimitado",
     price: "R$ 1.097",
+    priceNote: "ou 12x de R$ 109,70",
     link: WHATSAPP_PLANO_VITALICIO,
     featured: false,
+    features: ["Tudo do Essencial", "Acesso para sempre", "Todas atualizações", "Mentoria ao vivo"],
   },
 ];
 
@@ -29,39 +35,53 @@ const PlansSection = () => {
   return (
     <section className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-12">
-          Planos do Curso
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">
+            Escolha seu Plano
+          </h2>
+          <p className="font-body text-foreground/70 max-w-xl mx-auto">
+            Comece hoje a transformar sua paixão em renda. Todos os planos incluem garantia de 7 dias.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
             <div
               key={i}
-              className={`relative rounded-2xl p-8 text-center shadow-card transition-transform hover:scale-105 ${
+              className={`relative rounded-3xl p-8 text-center transition-all duration-300 hover:scale-105 hover:shadow-card-hover ${
                 plan.featured
-                  ? "gradient-hero text-primary-foreground ring-4 ring-accent"
-                  : "bg-card text-foreground"
+                  ? "bg-gradient-to-br from-white to-purple-50 border-2 border-primary shadow-card"
+                  : "bg-white shadow-card"
               }`}
             >
               {plan.featured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full font-display text-sm font-bold flex items-center gap-1">
-                  <Star className="w-4 h-4" /> Mais Popular
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-1.5 rounded-full font-display text-sm font-bold flex items-center gap-1.5 shadow-button">
+                  <Star className="w-4 h-4 fill-white" /> Mais Popular
                 </div>
               )}
-              <h3 className="font-display text-2xl font-bold mb-2">{plan.name}</h3>
-              <p className={`font-body text-sm mb-6 ${plan.featured ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                {plan.access}
-              </p>
-              <p className="font-display text-4xl font-bold mb-8">{plan.price}</p>
+              
+              <h3 className="font-display text-2xl font-bold mb-2 text-foreground">{plan.name}</h3>
+              <p className="font-body text-sm mb-4 text-muted-foreground">{plan.access}</p>
+              
+              <div className="mb-6">
+                <p className="font-display text-4xl md:text-5xl font-bold text-gradient">{plan.price}</p>
+                <p className="font-body text-sm text-muted-foreground mt-1">{plan.priceNote}</p>
+              </div>
+
+              <ul className="text-left space-y-2 mb-6 text-sm">
+                {plan.features.map((feature, j) => (
+                  <li key={j} className="flex items-center gap-2 text-foreground/80">
+                    <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                    <span className="font-body">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
               <a
                 href={plan.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-block w-full font-display text-lg font-bold px-6 py-4 rounded-full transition-transform hover:scale-105 ${
-                  plan.featured
-                    ? "bg-accent text-accent-foreground shadow-button"
-                    : "gradient-hero text-primary-foreground shadow-button"
-                }`}
+                className={`btn-cta w-full ${plan.featured ? 'btn-cta-pulse animate-micro-bounce' : ''}`}
               >
                 Quero entrar no curso
               </a>
