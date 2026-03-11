@@ -81,7 +81,7 @@ const PlansSection = () => {
                 href={plan.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`btn-cta w-full ${plan.featured ? 'btn-cta-pulse animate-micro-bounce' : ''}`}
+                className={`btn-cta w-full text-lg ${plan.featured ? 'btn-cta-pulse animate-micro-bounce' : ''}`}
               >
                 Quero entrar no curso
               </a>
