@@ -5,7 +5,7 @@ import { PaintSplash } from "./PaintEffects";
 const EventsSection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-br from-purple-50 via-white to-blue-50 overflow-hidden">
-      <PaintSplash className="absolute -top-8 -right-8 w-44 h-44 text-secondary animate-splash-in" />
+      <PaintSplash className="absolute -top-8 -right-8 w-44 h-44 text-primary/20 animate-splash-in" />
       <PaintSplash className="absolute -bottom-8 -left-8 w-36 h-36 text-primary animate-splash-in" style={{ animationDelay: "0.3s" }} />
 
       <div className="container mx-auto px-4 text-center relative z-10">
