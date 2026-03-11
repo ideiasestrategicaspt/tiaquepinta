@@ -2,34 +2,34 @@ import { WHATSAPP_PLANO_BASICO, WHATSAPP_PLANO_ESSENCIAL, WHATSAPP_PLANO_VITALIC
 import { Star, Check } from "lucide-react";
 
 const plans = [
-  {
-    name: "Curso Básico",
-    access: "3 meses de acesso",
-    price: "R$ 450",
-    priceNote: "ou 12x de R$ 45",
-    link: WHATSAPP_PLANO_BASICO,
-    featured: false,
-    features: ["50+ aulas gravadas", "Apostila completa", "Certificado", "Suporte pelo grupo do WhatsApp"],
-  },
-  {
-    name: "Curso Essencial",
-    access: "7 meses de acesso",
-    price: "R$ 847",
-    priceNote: "ou 12x de R$ 84,70",
-    link: WHATSAPP_PLANO_ESSENCIAL,
-    featured: true,
-    features: ["Tudo do Básico", "Suporte pelo grupo do WhatsApp", "Aulas bônus", "Certificado"],
-  },
-  {
-    name: "Curso Vitalício",
-    access: "Acesso ilimitado",
-    price: "R$ 1.097",
-    priceNote: "ou 12x de R$ 109,70",
-    link: WHATSAPP_PLANO_VITALICIO,
-    featured: false,
-    features: ["Tudo do Essencial", "Acesso para sempre", "Todas atualizações", "Mentoria ao vivo"],
-  },
-];
+{
+  name: "Curso Básico",
+  access: "3 meses de acesso",
+  price: "R$ 450",
+  priceNote: "ou 12x de R$ 45",
+  link: WHATSAPP_PLANO_BASICO,
+  featured: false,
+  features: ["50+ aulas gravadas", "Apostila completa", "Certificado", "Suporte pelo grupo do WhatsApp"]
+},
+{
+  name: "Curso Essencial",
+  access: "7 meses de acesso",
+  price: "R$ 847",
+  priceNote: "ou 12x de R$ 84,70",
+  link: WHATSAPP_PLANO_ESSENCIAL,
+  featured: true,
+  features: ["Tudo do Básico", "Suporte pelo grupo do WhatsApp", "Aulas bônus", "Certificado"]
+},
+{
+  name: "Curso Vitalício",
+  access: "Acesso ilimitado",
+  price: "R$ 1.097",
+  priceNote: "ou 12x de R$ 109,70",
+  link: WHATSAPP_PLANO_VITALICIO,
+  featured: false,
+  features: ["Tudo do Essencial", "Acesso para sempre", "Todas atualizações", "Mentoria ao vivo"]
+}];
+
 
 const PlansSection = () => {
   return (
@@ -40,25 +40,25 @@ const PlansSection = () => {
             Garanta Seu Acesso ao Método VDPF
           </h2>
           <p className="font-body text-foreground/70 max-w-xl mx-auto">
-            Comece hoje a transformar sua paixão em renda. Pagamento via Pix ou cartão em até 12x (com taxas). Todos os planos incluem garantia de 7 dias.
+            Comece hoje a transformar sua paixão em renda. Pagamento via Pix ou cartão em até 12x (com taxas). 
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {plans.map((plan, i) => (
-            <div
-              key={i}
-              className={`relative rounded-3xl p-8 text-center transition-all duration-300 hover:scale-105 hover:shadow-card-hover ${
-                plan.featured
-                  ? "bg-gradient-to-br from-white to-purple-50 border-2 border-primary shadow-card"
-                  : "bg-white shadow-card"
-              }`}
-            >
-              {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-1.5 rounded-full font-display text-sm font-bold flex items-center gap-1.5 shadow-button">
+          {plans.map((plan, i) =>
+          <div
+            key={i}
+            className={`relative rounded-3xl p-8 text-center transition-all duration-300 hover:scale-105 hover:shadow-card-hover ${
+            plan.featured ?
+            "bg-gradient-to-br from-white to-purple-50 border-2 border-primary shadow-card" :
+            "bg-white shadow-card"}`
+            }>
+            
+              {plan.featured &&
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-1.5 rounded-full font-display text-sm font-bold flex items-center gap-1.5 shadow-button">
                   <Star className="w-4 h-4 fill-white" /> Mais Popular
                 </div>
-              )}
+            }
               
               <h3 className="font-display text-2xl font-bold mb-2 text-foreground">{plan.name}</h3>
               <p className="font-body text-sm mb-4 text-muted-foreground">{plan.access}</p>
@@ -69,28 +69,28 @@ const PlansSection = () => {
               </div>
 
               <ul className="text-left space-y-2 mb-6 text-sm">
-                {plan.features.map((feature, j) => (
-                  <li key={j} className="flex items-center gap-2 text-foreground/80">
+                {plan.features.map((feature, j) =>
+              <li key={j} className="flex items-center gap-2 text-foreground/80">
                     <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
                     <span className="font-body">{feature}</span>
                   </li>
-                ))}
+              )}
               </ul>
               
               <a
-                href={plan.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`btn-cta w-full text-lg ${plan.featured ? 'btn-cta-pulse animate-micro-bounce' : ''}`}
-              >
+              href={plan.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn-cta w-full text-lg ${plan.featured ? 'btn-cta-pulse animate-micro-bounce' : ''}`}>
+              
                 Quero entrar no curso
               </a>
             </div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default PlansSection;
