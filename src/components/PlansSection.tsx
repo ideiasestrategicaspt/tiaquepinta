@@ -37,7 +37,7 @@ const PlansSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">
-            Escolha seu Plano
+            Garanta Seu Acesso ao Método VDPF
           </h2>
           <p className="font-body text-foreground/70 max-w-xl mx-auto">
             Comece hoje a transformar sua paixão em renda. Todos os planos incluem garantia de 7 dias.

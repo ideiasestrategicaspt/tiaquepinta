@@ -20,7 +20,7 @@ const MethodSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">
-            O que é o Método VDPF
+            O que é o Método VDPF?
           </h2>
           <p className="font-body text-foreground/80 text-lg max-w-2xl mx-auto">
             O Método VDPF foi criado para ensinar pintura facial do básico ao avançado, mesmo para quem nunca pintou antes. O curso mostra passo a passo as técnicas utilizadas em festas infantis e eventos.
