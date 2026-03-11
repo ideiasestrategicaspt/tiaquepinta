@@ -192,7 +192,7 @@
     font-weight: 700;
     padding: 1rem 2rem;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(4px);
     color: hsl(265 70% 55%);
     box-shadow: 
