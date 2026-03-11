@@ -19,16 +19,16 @@ const EventsSection = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
+            <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 shadow-sm">
               <MapPin className="w-4 h-4 text-primary" />
               <span className="font-body text-sm">Vila Velha e região</span>
             </div>
-            <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
+            <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 shadow-sm">
               <Calendar className="w-4 h-4 text-secondary" />
               <span className="font-body text-sm">Agenda 2026 aberta</span>
             </div>
-            <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm">
-              <Users className="w-4 h-4 text-green-500" />
+            <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 shadow-sm">
+              <Users className="w-4 h-4 text-accent" />
               <span className="font-body text-sm">+1000 festas realizadas</span>
             </div>
           </div>
