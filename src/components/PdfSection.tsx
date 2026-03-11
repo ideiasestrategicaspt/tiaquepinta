@@ -3,7 +3,7 @@ import { FileText, Download, Sparkles } from "lucide-react";
 
 const PdfSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-muted via-white to-muted">
+    <section className="py-10 md:py-24 bg-gradient-to-br from-muted via-white to-muted">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-card border border-border/50 text-center relative overflow-hidden">
           {/* Decorative background */}
