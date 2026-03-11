@@ -121,10 +121,10 @@ const PlansSection = () => {
     if (!isDragging.current) return;
     isDragging.current = false;
     const threshold = 50;
-    if (touchDelta.current < -threshold && activeIndex < plans.length - 1) {
-      scrollToIndex(activeIndex + 1);
-    } else if (touchDelta.current > threshold && activeIndex > 0) {
-      scrollToIndex(activeIndex - 1);
+    if (touchDelta.current < -threshold) {
+      scrollToIndex((activeIndex + 1) % plans.length);
+    } else if (touchDelta.current > threshold) {
+      scrollToIndex((activeIndex - 1 + plans.length) % plans.length);
     }
   }, [activeIndex, scrollToIndex]);
 
