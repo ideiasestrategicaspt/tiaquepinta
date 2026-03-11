@@ -44,16 +44,16 @@ const HeroSection = () => {
                 href={WHATSAPP_CURSO}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 font-display text-lg font-bold px-8 py-4 rounded-full bg-accent text-accent-foreground shadow-button hover:scale-105 transition-transform">
-                
+                className="btn-cta btn-cta-pulse btn-cta-mobile text-lg"
+              >
                 🎨 Quero aprender pintura facial
               </a>
               <a
                 href={WHATSAPP_FESTA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 font-display text-lg font-bold px-8 py-4 rounded-full bg-card text-primary shadow-button hover:scale-105 transition-transform">
-                
+                className="btn-cta-white btn-cta-mobile text-lg"
+              >
                 🎉 Quero contratar para festa
               </a>
             </div>
