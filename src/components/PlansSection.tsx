@@ -1,5 +1,7 @@
+import { useState, useRef, useEffect, useCallback } from "react";
 import { WHATSAPP_PLANO_BASICO, WHATSAPP_PLANO_ESSENCIAL, WHATSAPP_PLANO_VITALICIO } from "@/lib/whatsapp";
-import { Star, Check } from "lucide-react";
+import { Check } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const plans = [
   {
@@ -49,8 +51,141 @@ const plans = [
   }
 ];
 
+const PlanCard = ({ plan, isActive = true }: { plan: typeof plans[0]; isActive?: boolean }) => (
+  <div
+    className={`relative rounded-3xl p-6 sm:p-8 text-center transition-all duration-500 ${
+      plan.featured
+        ? "bg-gradient-to-br from-card to-purple-50 border-2 border-primary shadow-card-hover md:scale-105"
+        : "bg-card shadow-card"
+    } ${!isActive ? "blur-[2px] opacity-60 scale-95" : "blur-0 opacity-100 scale-100"}`}
+    style={{ minWidth: 0 }}
+  >
+    {plan.featured && (
+      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-2 rounded-lg font-display text-sm font-bold shadow-button whitespace-nowrap">
+        {plan.badge || "Mais Popular"}
+      </div>
+    )}
+
+    <h3 className="font-display text-xl sm:text-2xl font-bold mb-1 sm:mb-2 text-foreground">{plan.name}</h3>
+    <p className="font-body text-xs sm:text-sm mb-3 sm:mb-4 text-muted-foreground">{plan.access}</p>
+
+    <div className="mb-4 sm:mb-6">
+      <p className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">{plan.price}</p>
+      <p className="font-body text-xs sm:text-sm text-muted-foreground mt-1">{plan.priceNote}</p>
+    </div>
+
+    <ul className="text-left space-y-2 mb-5 sm:mb-6 text-xs sm:text-sm">
+      {plan.features.map((feature, j) => (
+        <li key={j} className="flex items-start gap-2 text-foreground/80">
+          <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+          <span className="font-body">{feature}</span>
+        </li>
+      ))}
+    </ul>
+
+    <a
+      href={plan.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`btn-cta w-full text-base sm:text-lg ${plan.featured ? "btn-cta-pulse animate-micro-bounce" : ""}`}
+    >
+      Quero entrar no curso
+    </a>
+  </div>
+);
 
 const PlansSection = () => {
+  const isMobile = useIsMobile();
+  const [activeIndex, setActiveIndex] = useState(1); // Essencial starts in center
+  const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef(0);
+  const touchDelta = useRef(0);
+  const isDragging = useRef(false);
+
+  const scrollToIndex = useCallback((index: number) => {
+    setActiveIndex(index);
+  }, []);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    isDragging.current = true;
+    touchDelta.current = 0;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    if (!isDragging.current) return;
+    touchDelta.current = e.touches[0].clientX - touchStartX.current;
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+    const threshold = 50;
+    if (touchDelta.current < -threshold && activeIndex < plans.length - 1) {
+      scrollToIndex(activeIndex + 1);
+    } else if (touchDelta.current > threshold && activeIndex > 0) {
+      scrollToIndex(activeIndex - 1);
+    }
+  }, [activeIndex, scrollToIndex]);
+
+  if (isMobile) {
+    return (
+      <section className="py-16 bg-muted overflow-hidden">
+        <div className="px-4">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-3xl font-bold text-gradient mb-4">
+              Garanta Seu Acesso ao Método VDPF
+            </h2>
+            <p className="font-body text-foreground/70 text-sm">
+              Comece hoje a transformar sua paixão em renda. Pagamento via Pix ou cartão em até 12x (com taxas).
+            </p>
+          </div>
+        </div>
+
+        <div
+          ref={containerRef}
+          className="relative"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div
+            className="flex transition-transform duration-500 ease-out"
+            style={{
+              transform: `translateX(calc(${-activeIndex * 80}% + ${(50 - 40)}%))`,
+            }}
+          >
+            {plans.map((plan, i) => (
+              <div
+                key={plan.name}
+                className="flex-shrink-0 px-2 transition-all duration-500"
+                style={{ width: "80%" }}
+                onClick={() => scrollToIndex(i)}
+              >
+                <PlanCard plan={plan} isActive={i === activeIndex} />
+              </div>
+            ))}
+          </div>
+
+          {/* Dots indicator */}
+          <div className="flex justify-center gap-2 mt-6">
+            {plans.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollToIndex(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  i === activeIndex
+                    ? "bg-primary scale-125"
+                    : "bg-primary/30"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
@@ -59,59 +194,18 @@ const PlansSection = () => {
             Garanta Seu Acesso ao Método VDPF
           </h2>
           <p className="font-body text-foreground/70 max-w-xl mx-auto">
-            Comece hoje a transformar sua paixão em renda. Pagamento via Pix ou cartão em até 12x (com taxas). 
+            Comece hoje a transformar sua paixão em renda. Pagamento via Pix ou cartão em até 12x (com taxas).
           </p>
         </div>
 
-        {/* Mobile: featured plan first, then others */}
-        <div className="flex flex-col md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {/* On mobile, reorder: featured first */}
-          {[...plans].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)).map((plan, i) =>
-          <div
-            key={plan.name}
-            className={`relative rounded-3xl p-6 sm:p-8 text-center transition-all duration-300 hover:scale-[1.02] md:hover:scale-105 hover:shadow-card-hover ${
-            plan.featured ?
-            "bg-gradient-to-br from-card to-purple-50 border-2 border-primary shadow-card-hover md:scale-105 order-first md:order-none" :
-            "bg-card shadow-card"}`
-            }>
-            
-              {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-2 rounded-lg font-display text-sm font-bold shadow-button whitespace-nowrap">
-                  {plan.badge || "Mais Popular"}
-                </div>
-              )}
-              
-              <h3 className="font-display text-xl sm:text-2xl font-bold mb-1 sm:mb-2 text-foreground">{plan.name}</h3>
-              <p className="font-body text-xs sm:text-sm mb-3 sm:mb-4 text-muted-foreground">{plan.access}</p>
-              
-              <div className="mb-4 sm:mb-6">
-                <p className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">{plan.price}</p>
-                <p className="font-body text-xs sm:text-sm text-muted-foreground mt-1">{plan.priceNote}</p>
-              </div>
-
-              <ul className="text-left space-y-2 mb-5 sm:mb-6 text-xs sm:text-sm">
-                {plan.features.map((feature, j) =>
-              <li key={j} className="flex items-start gap-2 text-foreground/80">
-                    <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="font-body">{feature}</span>
-                  </li>
-              )}
-              </ul>
-              
-              <a
-              href={plan.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`btn-cta w-full text-base sm:text-lg ${plan.featured ? 'btn-cta-pulse animate-micro-bounce' : ''}`}>
-              
-                Quero entrar no curso
-              </a>
-            </div>
-          )}
+        <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
+          {plans.map((plan) => (
+            <PlanCard key={plan.name} plan={plan} isActive />
+          ))}
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default PlansSection;
