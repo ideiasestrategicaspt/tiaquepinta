@@ -8,6 +8,7 @@ import GallerySection from "@/components/GallerySection";
 import EventsSection from "@/components/EventsSection";
 import PdfSection from "@/components/PdfSection";
 import FooterSection from "@/components/FooterSection";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <GallerySection />
       <EventsSection />
       <FooterSection />
+      <FloatingWhatsApp />
     </main>
   );
 };
