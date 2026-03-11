@@ -14,6 +14,9 @@ const GallerySection = () => {
   const prev = () => setActive((i) => (i === 0 ? images.length - 1 : i - 1));
   const next = () => setActive((i) => (i === images.length - 1 ? 0 : i + 1));
 
+  const getIndex = (offset: number) =>
+    (active + offset + images.length) % images.length;
+
   return (
     <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
       <BrushStroke className="absolute top-4 left-0 w-64 text-primary" />
@@ -24,51 +27,76 @@ const GallerySection = () => {
           Galeria de Trabalhos
         </h2>
 
-        <div className="relative flex items-center justify-center gap-3 md:gap-6 max-w-5xl mx-auto">
+        <div className="relative flex items-center justify-center max-w-5xl mx-auto">
           {/* Prev button */}
           <button
             onClick={prev}
-            className="shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-all"
+            className="absolute left-0 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-all"
             aria-label="Imagem anterior"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
-          {/* Images */}
-          <div className="flex items-center justify-center gap-3 md:gap-4 overflow-hidden">
-            {images.map((img, i) => {
-              const isActive = i === active;
-              return (
-                <div
-                  key={i}
-                  onClick={() => setActive(i)}
-                  className={`rounded-2xl overflow-hidden shadow-card transition-all duration-500 cursor-pointer ${
-                    isActive
-                      ? "scale-105 ring-4 ring-primary/40 shadow-card-hover z-10"
-                      : "scale-90 opacity-50 hover:opacity-70"
-                  }`}
-                >
-                  <img
-                    src={img}
-                    alt={`Pintura facial ${i + 1}`}
-                    className={`object-contain w-full transition-all duration-500 ${
-                      isActive ? "h-48 md:h-72" : "h-36 md:h-56"
-                    }`}
-                    loading="lazy"
-                  />
-                </div>
-              );
-            })}
+          <div className="flex items-center justify-center gap-2 md:gap-4 px-12 md:px-16">
+            {/* Left background image */}
+            <div
+              onClick={() => setActive(getIndex(-1))}
+              className="hidden md:block rounded-2xl overflow-hidden shadow-card opacity-40 scale-75 transition-all duration-500 cursor-pointer hover:opacity-60 shrink-0"
+            >
+              <img
+                src={images[getIndex(-1)]}
+                alt="Pintura facial"
+                className="w-40 h-44 object-contain"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Active / Featured image */}
+            <div className="rounded-2xl overflow-hidden shadow-card-hover ring-4 ring-primary/30 transition-all duration-500 z-10 shrink-0">
+              <img
+                src={images[active]}
+                alt={`Pintura facial ${active + 1}`}
+                className="w-64 h-72 md:w-80 md:h-96 object-contain bg-muted"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Right background image */}
+            <div
+              onClick={() => setActive(getIndex(1))}
+              className="hidden md:block rounded-2xl overflow-hidden shadow-card opacity-40 scale-75 transition-all duration-500 cursor-pointer hover:opacity-60 shrink-0"
+            >
+              <img
+                src={images[getIndex(1)]}
+                alt="Pintura facial"
+                className="w-40 h-44 object-contain"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           {/* Next button */}
           <button
             onClick={next}
-            className="shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-all"
+            className="absolute right-0 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-all"
             aria-label="Próxima imagem"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
+        </div>
+
+        {/* Dots indicator */}
+        <div className="flex justify-center gap-2 mt-6">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                i === active ? "bg-primary scale-125" : "bg-primary/30"
+              }`}
+              aria-label={`Ir para imagem ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>
