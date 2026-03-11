@@ -24,12 +24,12 @@ const GallerySection = () => {
           Galeria de Trabalhos
         </h2>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Carousel opts={{ loop: true }} className="w-full">
             <CarouselContent>
               {images.map((img, i) => (
-                <CarouselItem key={i} className="md:basis-1/2">
-                  <div className="rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300">
+                <CarouselItem key={i} className="basis-1/2 md:basis-1/4">
+                  <div className="rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:scale-105">
                     <img
                       src={img}
                       alt={`Pintura facial ${i + 1}`}
