@@ -1,4 +1,5 @@
 import { Palette, Brush, Sparkles, Image, Calendar, BookOpen } from "lucide-react";
+import { PaintSplash, BrushStroke } from "./PaintEffects";
 
 const items = [
   { icon: Brush, title: "Técnicas de pintura facial" },
@@ -11,8 +12,12 @@ const items = [
 
 const MethodSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
+      <PaintSplash className="absolute -top-10 -left-10 w-48 h-48 text-primary animate-splash-in" />
+      <BrushStroke className="absolute top-8 right-0 w-72 text-secondary" />
+      <PaintSplash className="absolute -bottom-10 -right-10 w-40 h-40 text-accent animate-splash-in" style={{ animationDelay: "0.5s" }} />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">
             O que é o Método VDPF
@@ -30,7 +35,7 @@ const MethodSection = () => {
           {items.map((item, i) => (
             <div
               key={i}
-              className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-shadow flex items-center gap-4"
+              className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:scale-105 transition-all duration-300 flex items-center gap-4"
             >
               <div className="w-12 h-12 rounded-full gradient-hero flex items-center justify-center flex-shrink-0">
                 <item.icon className="w-6 h-6 text-primary-foreground" />
