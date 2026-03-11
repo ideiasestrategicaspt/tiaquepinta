@@ -27,7 +27,7 @@ const GallerySection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-12">
-          Galeria de Trabalhos
+          Veja o Que Você Vai Aprender a Pintar
         </h2>
 
         <div className="relative flex items-center justify-center max-w-5xl mx-auto">
