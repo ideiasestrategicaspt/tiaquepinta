@@ -129,6 +129,23 @@ const PlansSection = () => {
   }, [activeIndex, scrollToIndex]);
 
   if (isMobile) {
+    // Get transform styles for stacked carousel
+    const getCardStyle = (i: number): React.CSSProperties => {
+      const diff = i - activeIndex;
+      if (diff === 0) {
+        return { transform: 'translateX(0) scale(1)', zIndex: 3, opacity: 1, filter: 'blur(0px)' };
+      }
+      if (diff === -1 || (diff === plans.length - 1)) {
+        // Card to the left (behind)
+        return { transform: 'translateX(-30%) scale(0.88)', zIndex: 1, opacity: 0.5, filter: 'blur(3px)' };
+      }
+      if (diff === 1 || (diff === -(plans.length - 1))) {
+        // Card to the right (behind)
+        return { transform: 'translateX(30%) scale(0.88)', zIndex: 1, opacity: 0.5, filter: 'blur(3px)' };
+      }
+      return { transform: 'translateX(0) scale(0.8)', zIndex: 0, opacity: 0, filter: 'blur(5px)' };
+    };
+
     return (
       <section className="py-16 bg-muted overflow-hidden">
         <div className="px-4">
@@ -144,22 +161,25 @@ const PlansSection = () => {
 
         <div
           ref={containerRef}
-          className="relative"
+          className="relative px-4"
+          style={{ minHeight: 480 }}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <div
-            className="flex transition-transform duration-500 ease-out"
-            style={{
-              transform: `translateX(calc(${-activeIndex * 80}% + ${(50 - 40)}%))`,
-            }}
-          >
+          <div className="relative w-full" style={{ maxWidth: '85%', margin: '0 auto' }}>
             {plans.map((plan, i) => (
               <div
                 key={plan.name}
-                className="flex-shrink-0 px-2 transition-all duration-500"
-                style={{ width: "80%" }}
+                className="transition-all duration-500 ease-out"
+                style={{
+                  ...getCardStyle(i),
+                  position: i === activeIndex ? 'relative' : 'absolute',
+                  top: i === activeIndex ? undefined : 0,
+                  left: i === activeIndex ? undefined : 0,
+                  right: i === activeIndex ? undefined : 0,
+                  width: '100%',
+                }}
                 onClick={() => scrollToIndex(i)}
               >
                 <PlanCard plan={plan} isActive={i === activeIndex} />
