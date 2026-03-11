@@ -1,4 +1,5 @@
 import luanaHero from "@/assets/luana-hero.jpeg";
+import paletteDecoration from "@/assets/palette-decoration.png";
 import { WHATSAPP_CURSO, WHATSAPP_FESTA } from "@/lib/whatsapp";
 import { Star, Users, Instagram } from "lucide-react";
 
@@ -7,6 +8,18 @@ const HeroSection = () => {
     <section className="relative overflow-hidden gradient-hero min-h-[90vh] flex items-center">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Palette decoration */}
+        <img
+          src={paletteDecoration}
+          alt=""
+          className="absolute -bottom-10 -right-10 md:bottom-10 md:right-10 w-40 h-40 md:w-72 md:h-72 lg:w-80 lg:h-80 opacity-[0.12] md:opacity-[0.15] rotate-12 select-none"
+          style={{ filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))' }}
+        />
+        <img
+          src={paletteDecoration}
+          alt=""
+          className="absolute top-10 -left-16 md:top-20 md:-left-10 w-28 h-28 md:w-48 md:h-48 opacity-[0.08] md:opacity-[0.1] -rotate-[25deg] select-none"
+        />
         <div className="absolute top-10 left-10 text-4xl animate-float" style={{ animationDelay: "0s" }}>⭐</div>
         <div className="absolute top-20 right-20 text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
         <div className="absolute bottom-20 left-20 text-3xl animate-float" style={{ animationDelay: "1s" }}>🎈</div>
