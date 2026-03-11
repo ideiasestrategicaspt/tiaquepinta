@@ -8,11 +8,11 @@ const HeroSection = () => {
     <section className="relative overflow-hidden gradient-hero min-h-[90vh] flex items-center">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Palette decoration - mobile only, large and eye-catching */}
+        {/* Palette decoration - mobile only, below title on left side */}
         <img
           src={paletteDecoration}
           alt=""
-          className="block md:hidden absolute -top-4 -right-4 w-52 h-52 opacity-25 rotate-12 select-none animate-float"
+          className="block md:hidden absolute top-[180px] -left-4 w-48 h-48 opacity-35 -rotate-12 select-none animate-float"
           style={{ filter: 'drop-shadow(0 0 30px rgba(255,255,255,0.4))' }}
         />
         <div className="absolute top-10 left-10 text-4xl animate-float" style={{ animationDelay: "0s" }}>⭐</div>
