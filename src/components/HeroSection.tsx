@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="absolute top-20 right-20 text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
         <div className="absolute bottom-20 left-20 text-3xl animate-float" style={{ animationDelay: "1s" }}>🎈</div>
         <div className="absolute bottom-40 right-10 text-4xl animate-float" style={{ animationDelay: "1.5s" }}>✨</div>
-        <div className="absolute top-1/2 left-5 text-2xl animate-float" style={{ animationDelay: "2s" }}>🖌️</div>
+        <div className="absolute top-1/2 right-5 text-2xl animate-float" style={{ animationDelay: "2s" }}>🖌️</div>
       </div>
 
       <div className="container mx-auto px-4 py-12 md:py-20">
