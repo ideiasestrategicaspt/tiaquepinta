@@ -27,14 +27,14 @@ const HeroSection = () => {
             </p>
 
             {/* Social proof */}
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
-              <div className="flex items-center gap-2 bg-card/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <Users className="w-5 h-5 text-accent" />
-                <span className="font-body text-sm font-semibold text-primary-foreground">+300 alunas formadas</span>
+            <div className="flex flex-row gap-2 md:gap-4 justify-center md:justify-start mb-8">
+              <div className="flex items-center gap-1 md:gap-2 bg-card/20 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2">
+                <Users className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+                <span className="font-body text-xs md:text-sm font-semibold text-primary-foreground">+300 alunas</span>
               </div>
-              <div className="flex items-center gap-2 bg-card/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <Instagram className="w-5 h-5 text-accent" />
-                <span className="font-body text-sm font-semibold text-primary-foreground">+19,6 mil seguidores</span>
+              <div className="flex items-center gap-1 md:gap-2 bg-card/20 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2">
+                <Instagram className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+                <span className="font-body text-xs md:text-sm font-semibold text-primary-foreground">+19,6 mil seguidores</span>
               </div>
             </div>
 
