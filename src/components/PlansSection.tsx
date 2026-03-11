@@ -9,7 +9,7 @@ const plans = [
     priceNote: "ou 12x de R$ 45",
     link: WHATSAPP_PLANO_BASICO,
     featured: false,
-    features: ["50+ aulas gravadas", "Apostila completa", "Suporte por email"],
+    features: ["50+ aulas gravadas", "Apostila completa", "Certificado", "Suporte pelo grupo do WhatsApp"],
   },
   {
     name: "Curso Essencial",
@@ -18,7 +18,7 @@ const plans = [
     priceNote: "ou 12x de R$ 84,70",
     link: WHATSAPP_PLANO_ESSENCIAL,
     featured: true,
-    features: ["Tudo do Básico", "Grupo VIP WhatsApp", "Aulas bônus", "Certificado"],
+    features: ["Tudo do Básico", "Suporte pelo grupo do WhatsApp", "Aulas bônus", "Certificado"],
   },
   {
     name: "Curso Vitalício",
