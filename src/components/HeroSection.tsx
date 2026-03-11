@@ -5,14 +5,7 @@ import { Star, Users, Instagram } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${luanaHero})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#8B5CF6]/90 via-[#8B5CF6]/70 to-[#8B5CF6]/50"></div>
-      </div>
+    <section className="relative overflow-hidden gradient-hero min-h-[90vh] flex items-center">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Palette decoration - mobile only, below title on left side */}
@@ -71,6 +64,21 @@ const HeroSection = () => {
               >
                 🎉 Quero contratar para festa
               </a>
+            </div>
+          </div>
+
+          {/* Image */}
+          <div className="hidden md:block flex-shrink-0 z-10">
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-full bg-card/20 blur-2xl"></div>
+              <img
+                src={luanaHero}
+                alt="Luana Moreira - Tia que Pinta"
+                className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-3xl object-cover border-4 border-card/30 shadow-card" />
+              
+              <div className="absolute -bottom-3 -right-3 bg-accent text-accent-foreground rounded-full p-3 shadow-button animate-float">
+                <Star className="w-6 h-6" />
+              </div>
             </div>
           </div>
         </div>
