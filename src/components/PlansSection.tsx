@@ -57,7 +57,7 @@ const PlanCard = ({ plan, isActive = true }: { plan: typeof plans[0]; isActive?:
       plan.featured
         ? "bg-gradient-to-br from-card to-purple-50 border-2 border-primary shadow-card-hover md:scale-105"
         : "bg-card shadow-card"
-    } ${!isActive ? "blur-[2px] opacity-60 scale-95" : "blur-0 opacity-100 scale-100"}`}
+    }`}
     style={{ minWidth: 0 }}
   >
     {plan.featured && (
