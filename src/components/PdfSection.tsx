@@ -5,7 +5,7 @@ const PdfSection = () => {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-muted via-white to-muted">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-card border border-border/50 text-center relative overflow-hidden">
+        <div className="max-w-2xl mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-card border border-border/50 text-center relative overflow-hidden">
           {/* Decorative background */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-100 to-transparent rounded-full opacity-50"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-50"></div>
