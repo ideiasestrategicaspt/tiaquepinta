@@ -19,9 +19,8 @@ const HeroSection = () => {
           {/* Text */}
           <div className="flex-1 text-center md:text-left z-10">
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-              Aprenda Pintura Facial e Descubra Como{" "}
-              <span className="underline decoration-wavy decoration-accent">Ganhar Dinheiro</span>{" "}
-              em Festas Infantis Mesmo Sem Experiência
+              Ganhe Dinheiro em Festas Infantis com{" "}
+              <span className="underline decoration-wavy decoration-accent">Pintura Facial</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-primary-foreground/90 mb-8">
               Método VDPF: O passo a passo que já formou mais de 300 alunas.
