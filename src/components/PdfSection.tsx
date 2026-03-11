@@ -11,19 +11,19 @@ const PdfSection = () => {
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-50"></div>
           
           <div className="relative z-10">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-500 flex items-center justify-center mx-auto mb-6 shadow-button animate-micro-bounce">
-              <FileText className="w-10 h-10 text-white" />
+            <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-green-400 to-green-500 flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-button animate-micro-bounce">
+              <FileText className="w-7 h-7 md:w-10 md:h-10 text-white" />
             </div>
             
-            <div className="inline-flex items-center gap-1.5 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-3 md:mb-4">
+              <Sparkles className="w-3 h-3 md:w-3.5 md:h-3.5" />
               <span>Para Iniciantes</span>
             </div>
             
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-gradient mb-3 md:mb-4">
               Comece com os PDFs para iniciantes
             </h2>
-            <p className="font-body text-foreground/70 text-lg mb-6">
+            <p className="font-body text-foreground/70 text-sm md:text-lg mb-4 md:mb-6">
               Pacote com 3 PDFs para quem quer começar na pintura facial sem investir muito.
             </p>
             
