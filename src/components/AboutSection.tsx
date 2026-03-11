@@ -1,4 +1,5 @@
 import logoTia from "@/assets/logo-tia-que-pinta.jpeg";
+import luanaHero from "@/assets/luana-hero.jpeg";
 
 const AboutSection = () => {
   return (
@@ -7,9 +8,14 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-10 max-w-4xl mx-auto">
           <div className="flex-shrink-0">
             <img
+              src={luanaHero}
+              alt="Luana Moreira - Tia que Pinta"
+              className="block md:hidden w-48 h-48 rounded-2xl object-cover shadow-card"
+            />
+            <img
               src={logoTia}
               alt="Logo Tia que Pinta"
-              className="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-contain shadow-card"
+              className="hidden md:block w-56 h-56 rounded-2xl object-contain shadow-card"
             />
           </div>
           <div>
