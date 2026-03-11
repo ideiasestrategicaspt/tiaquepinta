@@ -31,16 +31,16 @@ const MethodSection = () => {
           O que você vai aprender
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 max-w-4xl mx-auto">
           {items.map((item, i) => (
             <div
               key={i}
-              className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:scale-105 transition-all duration-300 flex items-center gap-4"
+              className="bg-card rounded-2xl p-4 sm:p-6 shadow-card hover:shadow-card-hover hover:scale-105 transition-all duration-300 flex flex-col items-center text-center sm:flex-row sm:text-left gap-3 sm:gap-4"
             >
-              <div className="w-12 h-12 rounded-full gradient-hero flex items-center justify-center flex-shrink-0">
-                <item.icon className="w-6 h-6 text-primary-foreground" />
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full gradient-hero flex items-center justify-center flex-shrink-0">
+                <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
               </div>
-              <span className="font-body font-semibold text-foreground">{item.title}</span>
+              <span className="font-body font-semibold text-foreground text-sm sm:text-base leading-tight">{item.title}</span>
             </div>
           ))}
         </div>

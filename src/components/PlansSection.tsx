@@ -63,34 +63,36 @@ const PlansSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {plans.map((plan, i) =>
+        {/* Mobile: featured plan first, then others */}
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* On mobile, reorder: featured first */}
+          {[...plans].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)).map((plan, i) =>
           <div
-            key={i}
-            className={`relative rounded-3xl p-8 text-center transition-all duration-300 hover:scale-105 hover:shadow-card-hover ${
+            key={plan.name}
+            className={`relative rounded-3xl p-6 sm:p-8 text-center transition-all duration-300 hover:scale-[1.02] md:hover:scale-105 hover:shadow-card-hover ${
             plan.featured ?
-            "bg-gradient-to-br from-white to-purple-50 border-2 border-primary shadow-card" :
-            "bg-white shadow-card"}`
+            "bg-gradient-to-br from-card to-purple-50 border-2 border-primary shadow-card-hover md:scale-105 order-first md:order-none" :
+            "bg-card shadow-card"}`
             }>
             
               {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-lg font-display text-sm font-bold shadow-button whitespace-nowrap">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-2 rounded-lg font-display text-sm font-bold shadow-button whitespace-nowrap">
                   {plan.badge || "Mais Popular"}
                 </div>
               )}
               
-              <h3 className="font-display text-2xl font-bold mb-2 text-foreground">{plan.name}</h3>
-              <p className="font-body text-sm mb-4 text-muted-foreground">{plan.access}</p>
+              <h3 className="font-display text-xl sm:text-2xl font-bold mb-1 sm:mb-2 text-foreground">{plan.name}</h3>
+              <p className="font-body text-xs sm:text-sm mb-3 sm:mb-4 text-muted-foreground">{plan.access}</p>
               
-              <div className="mb-6">
-                <p className="font-display text-4xl md:text-5xl font-bold text-gradient">{plan.price}</p>
-                <p className="font-body text-sm text-muted-foreground mt-1">{plan.priceNote}</p>
+              <div className="mb-4 sm:mb-6">
+                <p className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">{plan.price}</p>
+                <p className="font-body text-xs sm:text-sm text-muted-foreground mt-1">{plan.priceNote}</p>
               </div>
 
-              <ul className="text-left space-y-2 mb-6 text-sm">
+              <ul className="text-left space-y-2 mb-5 sm:mb-6 text-xs sm:text-sm">
                 {plan.features.map((feature, j) =>
-              <li key={j} className="flex items-center gap-2 text-foreground/80">
-                    <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+              <li key={j} className="flex items-start gap-2 text-foreground/80">
+                    <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                     <span className="font-body">{feature}</span>
                   </li>
               )}
@@ -100,7 +102,7 @@ const PlansSection = () => {
               href={plan.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`btn-cta w-full text-lg ${plan.featured ? 'btn-cta-pulse animate-micro-bounce' : ''}`}>
+              className={`btn-cta w-full text-base sm:text-lg ${plan.featured ? 'btn-cta-pulse animate-micro-bounce' : ''}`}>
               
                 Quero entrar no curso
               </a>
