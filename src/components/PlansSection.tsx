@@ -2,33 +2,52 @@ import { WHATSAPP_PLANO_BASICO, WHATSAPP_PLANO_ESSENCIAL, WHATSAPP_PLANO_VITALIC
 import { Star, Check } from "lucide-react";
 
 const plans = [
-{
-  name: "Curso Básico",
-  access: "3 meses de acesso",
-  price: "R$ 450",
-  priceNote: "ou 12x de R$ 45",
-  link: WHATSAPP_PLANO_BASICO,
-  featured: false,
-  features: ["50+ aulas gravadas", "Apostila completa", "Certificado", "Suporte pelo grupo do WhatsApp"]
-},
-{
-  name: "Curso Essencial",
-  access: "7 meses de acesso",
-  price: "R$ 847",
-  priceNote: "ou 12x de R$ 84,70",
-  link: WHATSAPP_PLANO_ESSENCIAL,
-  featured: true,
-  features: ["Tudo do Básico", "Suporte pelo grupo do WhatsApp", "Aulas bônus", "Certificado"]
-},
-{
-  name: "Curso Vitalício",
-  access: "Acesso ilimitado",
-  price: "R$ 1.097",
-  priceNote: "ou 12x de R$ 109,70",
-  link: WHATSAPP_PLANO_VITALICIO,
-  featured: false,
-  features: ["Tudo do Essencial", "Acesso para sempre", "Todas atualizações", "Mentoria ao vivo"]
-}];
+  {
+    name: "Curso Básico",
+    access: "3 meses de acesso",
+    price: "R$ 450",
+    priceNote: "ou 12x de R$ 45",
+    link: WHATSAPP_PLANO_BASICO,
+    featured: false,
+    features: [
+      "Mais de 50 aulas gravadas passo a passo",
+      "Técnicas fundamentais de pintura facial",
+      "Desenhos infantis que fazem sucesso em festas",
+      "Apostila completa para prática",
+      "Certificado de participação"
+    ]
+  },
+  {
+    name: "Curso Essencial",
+    access: "7 meses de acesso",
+    price: "R$ 847",
+    priceNote: "ou 12x de R$ 84,70",
+    link: WHATSAPP_PLANO_ESSENCIAL,
+    featured: true,
+    features: [
+      "Acesso estendido para praticar as técnicas com calma",
+      "Grupo exclusivo de suporte no WhatsApp",
+      "Aulas bônus com novos desenhos e técnicas",
+      "Certificado de participação"
+    ],
+    badge: "⭐ Plano mais escolhido pelas alunas"
+  },
+  {
+    name: "Curso Vitalício",
+    access: "Acesso ilimitado",
+    price: "R$ 1.097",
+    priceNote: "ou 12x de R$ 109,70",
+    link: WHATSAPP_PLANO_VITALICIO,
+    featured: false,
+    features: [
+      "Acesso permanente ao curso",
+      "Todas as futuras atualizações do Método VDPF",
+      "Conteúdos novos adicionados ao longo do tempo",
+      "Mentorias ao vivo exclusivas",
+      "Comunidade de alunas para troca de experiências"
+    ]
+  }
+];
 
 
 const PlansSection = () => {
@@ -54,11 +73,12 @@ const PlansSection = () => {
             "bg-white shadow-card"}`
             }>
             
-              {plan.featured &&
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-1.5 rounded-full font-display text-sm font-bold flex items-center gap-1.5 shadow-button">
-                  <Star className="w-4 h-4 fill-white" /> Mais Popular
+              {plan.featured && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-1.5 rounded-full font-display text-sm font-bold flex items-center gap-1.5 shadow-button">
+                  <Star className="w-4 h-4 fill-white" />
+                  {plan.badge || "Mais Popular"}
                 </div>
-            }
+              )}
               
               <h3 className="font-display text-2xl font-bold mb-2 text-foreground">{plan.name}</h3>
               <p className="font-body text-sm mb-4 text-muted-foreground">{plan.access}</p>
