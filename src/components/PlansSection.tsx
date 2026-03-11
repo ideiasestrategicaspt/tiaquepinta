@@ -144,28 +144,33 @@ const PlansSection = () => {
 
         <div
           ref={containerRef}
-          className="relative"
+          className="relative flex items-center justify-center"
+          style={{ height: "580px" }}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <div
-            className="flex transition-transform duration-500 ease-out"
-            style={{
-              transform: `translateX(calc(${-activeIndex * 80}% + ${(50 - 40)}%))`,
-            }}
-          >
-            {plans.map((plan, i) => (
+          {plans.map((plan, i) => {
+            const offset = i - activeIndex;
+            const isActive = i === activeIndex;
+            return (
               <div
                 key={plan.name}
-                className="flex-shrink-0 px-2 transition-all duration-500"
-                style={{ width: "80%" }}
+                className="absolute transition-all duration-500 ease-out px-3"
+                style={{
+                  width: "82%",
+                  transform: `translateX(${offset * 65}%) scale(${isActive ? 1 : 0.85})`,
+                  zIndex: isActive ? 10 : 5 - Math.abs(offset),
+                  filter: isActive ? "none" : "blur(1.5px)",
+                  opacity: isActive ? 1 : 0.55,
+                  pointerEvents: isActive ? "auto" : "none",
+                }}
                 onClick={() => scrollToIndex(i)}
               >
-                <PlanCard plan={plan} isActive={i === activeIndex} />
+                <PlanCard plan={plan} isActive={isActive} />
               </div>
-            ))}
-          </div>
+            );
+          })}
 
           {/* Dots indicator */}
           <div className="flex justify-center gap-2 mt-6">
