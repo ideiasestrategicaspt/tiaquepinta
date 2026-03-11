@@ -12,7 +12,7 @@ const HeroSection = () => {
         <img
           src={paletteDecoration}
           alt=""
-          className="block md:hidden absolute -bottom-6 -right-6 w-64 h-64 opacity-20 rotate-12 select-none animate-float"
+          className="block md:hidden absolute -top-4 -right-4 w-52 h-52 opacity-25 rotate-12 select-none animate-float"
           style={{ filter: 'drop-shadow(0 0 30px rgba(255,255,255,0.4))' }}
         />
         <div className="absolute top-10 left-10 text-4xl animate-float" style={{ animationDelay: "0s" }}>⭐</div>
