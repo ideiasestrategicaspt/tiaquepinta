@@ -3,17 +3,17 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "Maria Silva",
-    text: "O curso mudou minha vida! Hoje faço pintura facial em festas todo fim de semana e tenho uma renda extra maravilhosa. Super recomendo!",
+    text: "O curso mudou minha vida! Hoje faço pintura facial em festas todo fim de semana.",
     stars: 5,
   },
   {
     name: "Ana Paula",
-    text: "Nunca imaginei que conseguiria aprender pintura facial tão rápido. O método da Luana é incrível, muito didático e prático!",
+    text: "Aprendi pintura facial muito rápido. O método da Luana é incrível e prático!",
     stars: 5,
   },
   {
     name: "Camila Santos",
-    text: "Comecei do zero e em poucos meses já estava atendendo festas. O grupo de WhatsApp ajuda demais com suporte e dúvidas!",
+    text: "Comecei do zero e logo já estava atendendo festas. O suporte ajuda demais!",
     stars: 5,
   },
 ];
