@@ -5,7 +5,14 @@ import { Star, Users, Instagram } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden gradient-hero min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${luanaHero})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#8B5CF6]/90 via-[#8B5CF6]/70 to-[#8B5CF6]/50"></div>
+      </div>
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Palette decoration - mobile only, below title on left side */}
