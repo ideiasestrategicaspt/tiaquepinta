@@ -27,30 +27,30 @@ const PdfSection = () => {
               Pacote com 3 PDFs para quem quer começar na pintura facial sem investir muito.
             </p>
             
-            <ul className="font-body text-foreground/70 text-left max-w-xs mx-auto mb-6 space-y-3 bg-muted/50 rounded-2xl p-5">
+            <ul className="font-body text-foreground/70 text-left max-w-xs mx-auto mb-4 md:mb-6 space-y-2 md:space-y-3 bg-muted/50 rounded-2xl p-4 md:p-5 text-sm">
               <li className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                  <Download className="w-3.5 h-3.5 text-green-600" />
+                <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <Download className="w-3 h-3 md:w-3.5 md:h-3.5 text-green-600" />
                 </span>
                 <span>Apostila de apoio completa</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                  <Download className="w-3.5 h-3.5 text-green-600" />
+                <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <Download className="w-3 h-3 md:w-3.5 md:h-3.5 text-green-600" />
                 </span>
                 <span>Desenhos para treino</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                  <Download className="w-3.5 h-3.5 text-green-600" />
+                <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <Download className="w-3 h-3 md:w-3.5 md:h-3.5 text-green-600" />
                 </span>
                 <span>Guia para iniciantes</span>
               </li>
             </ul>
             
-            <div className="mb-6">
-              <p className="font-display text-5xl font-bold text-gradient">R$ 97</p>
-              <p className="font-body text-sm text-muted-foreground">Pagamento único • Acesso imediato</p>
+            <div className="mb-4 md:mb-6">
+              <p className="font-display text-4xl md:text-5xl font-bold text-gradient">R$ 97</p>
+              <p className="font-body text-xs md:text-sm text-muted-foreground">Pagamento único • Acesso imediato</p>
             </div>
             
             <a
