@@ -73,21 +73,6 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-
-          {/* Image */}
-          <div className="hidden md:block flex-shrink-0 z-10">
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-full bg-card/20 blur-2xl"></div>
-              <img
-                src={luanaHero}
-                alt="Luana Moreira - Tia que Pinta"
-                className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-3xl object-cover border-4 border-card/30 shadow-card" />
-              
-              <div className="absolute -bottom-3 -right-3 bg-accent text-accent-foreground rounded-full p-3 shadow-button animate-float">
-                <Star className="w-6 h-6" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>);
