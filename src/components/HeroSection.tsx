@@ -1,4 +1,5 @@
 import luanaHero from "@/assets/luana-hero.jpeg";
+import paletteDecoration from "@/assets/palette-decoration.png";
 import { WHATSAPP_CURSO, WHATSAPP_FESTA } from "@/lib/whatsapp";
 import { Star, Users, Instagram } from "lucide-react";
 
