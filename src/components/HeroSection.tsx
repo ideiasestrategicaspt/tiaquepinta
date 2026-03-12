@@ -30,16 +30,16 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Text */}
           <div className="flex-1 text-center md:text-left z-10">
-            <h1 className="font-display text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6">
+            <h1 className="hero-enter hero-enter-1 font-display text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6">
               Ganhe Dinheiro em Festas Infantis com{" "}
               <span className="underline decoration-wavy decoration-accent">Pintura Facial</span>
             </h1>
-            <p className="font-body text-sm md:text-xl text-primary-foreground/90 mb-8">
+            <p className="hero-enter hero-enter-2 font-body text-sm md:text-xl text-primary-foreground/90 mb-8">
               Método VDPF: O passo a passo que já formou mais de 300 alunas.
             </p>
 
             {/* Social proof */}
-            <div className="flex flex-row gap-2 md:gap-4 justify-center md:justify-start mb-8">
+            <div className="hero-enter hero-enter-3 flex flex-row gap-2 md:gap-4 justify-center md:justify-start mb-8">
               <div className="flex items-center gap-1 md:gap-2 bg-card/20 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2">
                 <Users className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                 <span className="font-body text-xs md:text-sm font-semibold text-primary-foreground">+300 alunas</span>
@@ -51,7 +51,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="hero-enter hero-enter-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href={WHATSAPP_CURSO}
                 target="_blank"
