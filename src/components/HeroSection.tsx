@@ -1,6 +1,6 @@
 import luanaHero from "@/assets/luana-hero.jpeg";
 import { WHATSAPP_CURSO, WHATSAPP_FESTA } from "@/lib/whatsapp";
-import { Star, Users, Instagram } from "lucide-react";
+import { Star, Users, Instagram, ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -11,6 +11,19 @@ const HeroSection = () => {
         <div className="absolute top-20 right-20 text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
         <div className="absolute bottom-20 left-20 text-3xl animate-float" style={{ animationDelay: "1s" }}>🎈</div>
         <div className="absolute bottom-40 right-10 text-4xl animate-float" style={{ animationDelay: "1.5s" }}>✨</div>
+      </div>
+
+      {/* Mobile-only animated background bubbles */}
+      <div className="md:hidden absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Floating paint blobs */}
+        <div className="absolute w-32 h-32 rounded-full bg-accent/10 blur-xl hero-bubble-1" />
+        <div className="absolute w-24 h-24 rounded-full bg-secondary/15 blur-xl hero-bubble-2" />
+        <div className="absolute w-40 h-40 rounded-full bg-primary-foreground/5 blur-2xl hero-bubble-3" />
+        <div className="absolute w-20 h-20 rounded-full bg-accent/8 blur-lg hero-bubble-4" />
+        <div className="absolute w-28 h-28 rounded-full bg-secondary/10 blur-xl hero-bubble-5" />
+        
+        {/* Shimmer light sweep */}
+        <div className="absolute inset-0 hero-shimmer" />
       </div>
 
       <div className="container mx-auto px-4 py-12 md:py-20">
@@ -73,6 +86,12 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Mobile scroll indicator */}
+      <div className="md:hidden absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 hero-scroll-hint">
+        <span className="font-body text-[10px] tracking-widest uppercase text-primary-foreground/60">Saiba mais</span>
+        <ChevronDown className="w-5 h-5 text-primary-foreground/60 animate-bounce" />
       </div>
     </section>);
 
