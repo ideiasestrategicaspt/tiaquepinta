@@ -72,7 +72,7 @@ const HeroSection = () => {
           </div>
 
           {/* Image */}
-          <div className="hidden md:block flex-shrink-0 z-10">
+          <div className="hidden md:block flex-shrink-0 z-10 hero-enter hero-enter-3">
             <div className="relative">
               <div className="absolute -inset-4 rounded-full bg-card/20 blur-2xl"></div>
               <img
