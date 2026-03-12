@@ -411,3 +411,26 @@
   0% { opacity: 0; transform: translate(-50%, 10px); }
   100% { opacity: 1; transform: translate(-50%, 0); }
 }
+
+/* Hero staggered entrance animations */
+.hero-enter {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: hero-entrance 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-enter-1 { animation-delay: 0.1s; }
+.hero-enter-2 { animation-delay: 0.3s; }
+.hero-enter-3 { animation-delay: 0.5s; }
+.hero-enter-4 { animation-delay: 0.7s; }
+
+@keyframes hero-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
