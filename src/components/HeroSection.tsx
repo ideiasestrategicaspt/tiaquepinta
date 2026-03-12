@@ -40,11 +40,11 @@ const HeroSection = () => {
 
             {/* Social proof */}
             <div className="hero-enter hero-enter-3 flex flex-row items-center gap-2 md:gap-4 justify-center md:justify-start mb-8">
+              <span className="text-xl animate-wiggle">🖌️</span>
               <div className="flex items-center gap-1 md:gap-2 bg-card/20 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2">
                 <Users className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                 <span className="font-body text-xs md:text-sm font-semibold text-primary-foreground">+300 alunas</span>
               </div>
-              <span className="text-xl animate-wiggle">🖌️</span>
               <div className="flex items-center gap-1 md:gap-2 bg-card/20 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2">
                 <Instagram className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                 <span className="font-body text-xs md:text-sm font-semibold text-primary-foreground">+19,6 mil seguidores</span>
