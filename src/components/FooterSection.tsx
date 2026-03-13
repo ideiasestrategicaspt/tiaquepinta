@@ -8,9 +8,12 @@ const FooterSection = () => {
       <section className="py-20 md:py-28 bg-gradient-to-br from-primary via-purple-600 to-secondary relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 left-10 text-4xl opacity-30 animate-float">⭐</div>
-          <div className="absolute bottom-20 right-20 text-3xl opacity-30 animate-float" style={{ animationDelay: "1s" }}>🎨</div>
-          <div className="absolute top-1/2 right-10 text-2xl opacity-30 animate-float" style={{ animationDelay: "0.5s" }}>✨</div>
+          <div className="absolute top-10 left-10 text-5xl opacity-40 animate-float">⭐</div>
+          <div className="absolute bottom-20 right-20 text-4xl opacity-40 animate-float" style={{ animationDelay: "1s" }}>🎨</div>
+          <div className="absolute top-1/2 right-10 text-3xl opacity-40 animate-float" style={{ animationDelay: "0.5s" }}>✨</div>
+          <div className="absolute top-20 right-1/3 text-3xl opacity-35 animate-float" style={{ animationDelay: "0.8s" }}>🖌️</div>
+          <div className="absolute bottom-1/3 left-1/4 text-3xl opacity-35 animate-float" style={{ animationDelay: "1.3s" }}>🎈</div>
+          <div className="absolute bottom-10 left-1/3 text-3xl opacity-30 animate-float" style={{ animationDelay: "0.3s" }}>🎉</div>
         </div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
