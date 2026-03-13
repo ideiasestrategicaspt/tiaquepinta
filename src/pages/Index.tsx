@@ -10,27 +10,60 @@ import PdfSection from "@/components/PdfSection";
 import FooterSection from "@/components/FooterSection";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import SectionDivider from "@/components/SectionDivider";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
     <main className="overflow-hidden">
       <HeroSection />
       <SectionDivider variant="paint" className="text-purple-50/80" />
-      <AboutSection />
+
+      <ScrollReveal variant="fade-up">
+        <AboutSection />
+      </ScrollReveal>
+
       <SectionDivider variant="wave" className="text-muted" />
-      <MethodSection />
+
+      <ScrollReveal variant="fade-up" delay={100}>
+        <MethodSection />
+      </ScrollReveal>
+
       <SectionDivider variant="blob" className="text-background" />
-      <CourseContentSection />
+
+      <ScrollReveal variant="fade-up" delay={100}>
+        <CourseContentSection />
+      </ScrollReveal>
+
       <SectionDivider variant="paint" className="text-muted" />
-      <PlansSection />
+
+      <ScrollReveal variant="zoom-in">
+        <PlansSection />
+      </ScrollReveal>
+
       <SectionDivider variant="wave" className="text-blue-50/50" />
-      <TestimonialsSection />
+
+      <ScrollReveal variant="fade-up">
+        <TestimonialsSection />
+      </ScrollReveal>
+
       <SectionDivider variant="blob" className="text-muted" />
-      <PdfSection />
+
+      <ScrollReveal variant="fade-up" delay={100}>
+        <PdfSection />
+      </ScrollReveal>
+
       <SectionDivider variant="paint" className="text-muted" />
-      <GallerySection />
+
+      <ScrollReveal variant="fade-up">
+        <GallerySection />
+      </ScrollReveal>
+
       <SectionDivider variant="wave" className="text-purple-50" />
-      <EventsSection />
+
+      <ScrollReveal variant="fade-up">
+        <EventsSection />
+      </ScrollReveal>
+
       <FooterSection />
       <FloatingWhatsApp />
     </main>
