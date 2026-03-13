@@ -9,10 +9,10 @@ const PdfSection = () => {
       <PaintSplash className="absolute -top-6 -left-8 w-44 h-44 text-primary/30 animate-splash-in" />
       <BrushStroke className="absolute top-8 right-0 w-64 text-accent" />
       <PaintSplash className="absolute -bottom-8 -right-6 w-36 h-36 text-secondary/30 animate-splash-in" style={{ animationDelay: "0.3s" }} />
-      <div className="hidden md:block absolute top-8 right-4 text-3xl animate-float">🖌️</div>
-      <div className="hidden md:block absolute bottom-8 left-4 text-3xl animate-float" style={{ animationDelay: "0.9s" }}>⭐</div>
-      <div className="hidden md:block absolute top-1/3 left-2 text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
-      <div className="hidden md:block absolute bottom-1/3 right-2 text-2xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
+      <div className="absolute top-2 right-2 md:top-8 md:right-4 text-xl md:text-3xl animate-float">🖌️</div>
+      <div className="absolute bottom-2 left-2 md:bottom-8 md:left-4 text-xl md:text-3xl animate-float" style={{ animationDelay: "0.9s" }}>⭐</div>
+      <div className="absolute top-2 left-2 md:top-1/3 md:left-2 text-xl md:text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
+      <div className="absolute bottom-2 right-2 md:bottom-1/3 md:right-2 text-lg md:text-2xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-card border border-border/50 text-center relative overflow-hidden">
