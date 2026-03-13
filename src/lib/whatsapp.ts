@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5527999999999"; // Substituir pelo número real
+const WHATSAPP_NUMBER = "5527996584773"; // Número real da Luana
 
 export const whatsappLink = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
