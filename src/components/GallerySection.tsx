@@ -21,7 +21,10 @@ const GallerySection = () => {
     (active + offset + images.length) % images.length;
 
   return (
-    <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
+    <section className="relative py-16 md:py-24 bg-gradient-to-br from-muted via-blue-50/40 to-muted overflow-hidden">
+      {/* Extra decorative blobs */}
+      <div className="absolute top-1/4 left-4 w-32 h-32 rounded-full bg-primary/5 blur-2xl" />
+      <div className="absolute bottom-1/3 right-8 w-28 h-28 rounded-full bg-accent/5 blur-2xl" />
       <BrushStroke className="absolute top-4 left-0 w-64 text-primary" />
       <BrushStroke className="absolute bottom-4 right-0 w-56 text-accent" />
 

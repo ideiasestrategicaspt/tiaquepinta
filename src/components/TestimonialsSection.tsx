@@ -35,7 +35,12 @@ const TestimonialsSection = () => {
     (active + offset + testimonials.length) % testimonials.length;
 
   return (
-    <section className="py-16 md:py-24 bg-background overflow-hidden">
+    <section className="relative py-16 md:py-24 bg-gradient-to-br from-blue-50/50 via-background to-purple-50/50 overflow-hidden">
+      {/* Decorative */}
+      <div className="absolute top-8 right-12 text-3xl opacity-15 animate-float">💬</div>
+      <div className="absolute bottom-12 left-8 text-2xl opacity-15 animate-float" style={{ animationDelay: "0.5s" }}>⭐</div>
+      <div className="absolute top-1/3 left-4 w-28 h-28 rounded-full bg-secondary/5 blur-2xl" />
+      <div className="absolute bottom-1/4 right-8 w-36 h-36 rounded-full bg-primary/5 blur-2xl" />
       <div className="container mx-auto px-4">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-12">
           O que as alunas dizem
