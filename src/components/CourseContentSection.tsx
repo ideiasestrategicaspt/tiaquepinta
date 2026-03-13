@@ -22,11 +22,11 @@ const CourseContentSection = () => {
       <PaintSplash className="absolute -top-8 -left-10 w-48 h-48 text-secondary/30 animate-splash-in" />
       <BrushStroke className="absolute bottom-12 right-0 w-72 text-primary" />
       <PaintSplash className="absolute -bottom-6 -right-6 w-40 h-40 text-accent/30 animate-splash-in" style={{ animationDelay: "0.6s" }} />
-      <div className="absolute top-10 left-10 text-4xl animate-float">🖌️</div>
-      <div className="absolute bottom-20 right-16 text-3xl animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
-      <div className="absolute top-1/3 right-20 text-3xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
-      <div className="absolute bottom-1/3 left-16 text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
-      <div className="absolute top-1/2 right-8 text-2xl animate-float" style={{ animationDelay: "1.5s" }}>🎈</div>
+      <div className="hidden md:block absolute top-8 left-2 text-4xl animate-float">🖌️</div>
+      <div className="hidden md:block absolute bottom-10 right-4 text-3xl animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
+      <div className="hidden md:block absolute top-1/3 right-2 text-3xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
+      <div className="hidden md:block absolute bottom-1/3 left-2 text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
+      <div className="hidden lg:block absolute top-1/2 right-4 text-2xl animate-float" style={{ animationDelay: "1.5s" }}>🎈</div>
       <div className="container mx-auto px-4">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-10">
           O que está incluso no curso

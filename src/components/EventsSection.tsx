@@ -8,12 +8,12 @@ const EventsSection = () => {
       <PaintSplash className="absolute -top-8 -right-8 w-52 h-52 text-primary/30 animate-splash-in" />
       <PaintSplash className="absolute -bottom-8 -left-8 w-44 h-44 text-primary/25 animate-splash-in" style={{ animationDelay: "0.3s" }} />
       <BrushStroke className="absolute bottom-10 right-0 w-72 text-secondary" />
-      <div className="absolute top-12 left-10 text-4xl animate-float">⭐</div>
-      <div className="absolute top-20 right-16 text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🖌️</div>
-      <div className="absolute bottom-16 left-16 text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
-      <div className="absolute bottom-20 right-10 text-3xl animate-float" style={{ animationDelay: "0.8s" }}>🎈</div>
-      <div className="absolute top-1/3 left-6 text-3xl animate-float" style={{ animationDelay: "1.3s" }}>🎨</div>
-      <div className="absolute top-1/2 right-1/4 text-2xl animate-float" style={{ animationDelay: "0.6s" }}>🎉</div>
+      <div className="hidden md:block absolute top-8 left-4 text-4xl animate-float">⭐</div>
+      <div className="hidden md:block absolute top-16 right-4 text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🖌️</div>
+      <div className="hidden md:block absolute bottom-8 left-4 text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
+      <div className="hidden md:block absolute bottom-16 right-2 text-3xl animate-float" style={{ animationDelay: "0.8s" }}>🎈</div>
+      <div className="hidden md:block absolute top-1/3 left-2 text-3xl animate-float" style={{ animationDelay: "1.3s" }}>🎨</div>
+      <div className="hidden lg:block absolute top-1/2 right-8 text-2xl animate-float" style={{ animationDelay: "0.6s" }}>🎉</div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-2xl mx-auto">
