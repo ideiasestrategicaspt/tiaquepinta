@@ -1,4 +1,4 @@
-import luanaHero from "@/assets/luana-hero.jpeg";
+import cursoVdpf from "@/assets/curso-vdpf.jpeg";
 import { WHATSAPP_CURSO, WHATSAPP_FESTA } from "@/lib/whatsapp";
 import { Star, Users, Instagram, ChevronDown } from "lucide-react";
 
