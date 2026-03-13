@@ -16,12 +16,12 @@ const MethodSection = () => {
       <PaintSplash className="absolute -top-10 -left-10 w-56 h-56 text-primary/30 animate-splash-in" />
       <BrushStroke className="absolute top-8 right-0 w-80 text-secondary" />
       <PaintSplash className="absolute -bottom-10 -right-10 w-48 h-48 text-accent/30 animate-splash-in" style={{ animationDelay: "0.5s" }} />
-      <div className="absolute top-16 left-12 text-4xl animate-float">⭐</div>
-      <div className="absolute top-24 right-16 text-3xl animate-float" style={{ animationDelay: "0.7s" }}>🎨</div>
-      <div className="absolute bottom-16 left-20 text-3xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
-      <div className="absolute bottom-24 right-8 text-3xl animate-float" style={{ animationDelay: "0.4s" }}>🖌️</div>
-      <div className="absolute top-1/2 left-6 text-3xl animate-float" style={{ animationDelay: "0.9s" }}>🎈</div>
-      <div className="absolute top-1/3 right-1/4 text-2xl animate-float" style={{ animationDelay: "1.5s" }}>🎉</div>
+      <div className="hidden md:block absolute top-8 left-2 text-4xl animate-float">⭐</div>
+      <div className="hidden md:block absolute top-16 right-4 text-3xl animate-float" style={{ animationDelay: "0.7s" }}>🎨</div>
+      <div className="hidden md:block absolute bottom-8 left-4 text-3xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
+      <div className="hidden md:block absolute bottom-16 right-2 text-3xl animate-float" style={{ animationDelay: "0.4s" }}>🖌️</div>
+      <div className="hidden md:block absolute top-1/2 left-2 text-3xl animate-float" style={{ animationDelay: "0.9s" }}>🎈</div>
+      <div className="hidden lg:block absolute top-1/3 right-8 text-2xl animate-float" style={{ animationDelay: "1.5s" }}>🎉</div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">

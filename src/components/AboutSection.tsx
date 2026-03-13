@@ -7,10 +7,10 @@ const AboutSection = () => {
       {/* Decorative elements */}
       <PaintSplash className="absolute -top-6 -right-6 w-48 h-48 text-primary/30 animate-splash-in" />
       <PaintSplash className="absolute -bottom-8 -left-8 w-40 h-40 text-secondary/30 animate-splash-in" style={{ animationDelay: "0.4s" }} />
-      <div className="absolute top-20 right-20 text-4xl animate-float" style={{ animationDelay: "0.3s" }}>🎨</div>
-      <div className="absolute bottom-10 left-10 text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
-      <div className="absolute top-1/2 right-8 text-3xl animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
-      <div className="absolute bottom-1/3 left-1/4 text-2xl animate-float" style={{ animationDelay: "1.3s" }}>🖌️</div>
+      <div className="hidden md:block absolute top-10 right-4 text-4xl animate-float" style={{ animationDelay: "0.3s" }}>🎨</div>
+      <div className="hidden md:block absolute bottom-10 left-4 text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
+      <div className="hidden md:block absolute top-1/2 right-2 text-3xl animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
+      <div className="hidden md:block absolute bottom-20 left-2 text-2xl animate-float" style={{ animationDelay: "1.3s" }}>🖌️</div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-10 max-w-4xl mx-auto">
