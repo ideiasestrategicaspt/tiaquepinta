@@ -41,11 +41,11 @@ const TestimonialsSection = () => {
       <PaintSplash className="absolute -top-6 -right-8 w-44 h-44 text-primary/30 animate-splash-in" />
       <BrushStroke className="absolute top-10 left-0 w-64 text-accent" />
       <PaintSplash className="absolute -bottom-8 -left-6 w-36 h-36 text-secondary/30 animate-splash-in" style={{ animationDelay: "0.5s" }} />
-      <div className="absolute top-2 right-2 md:top-8 md:right-4 text-xl md:text-4xl animate-float">⭐</div>
-      <div className="absolute bottom-2 left-2 md:bottom-8 md:left-4 text-xl md:text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
-      <div className="absolute top-2 left-2 md:top-1/2 md:left-2 text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
-      <div className="absolute bottom-2 right-2 md:top-1/3 md:right-2 md:bottom-auto text-xl md:text-3xl animate-float" style={{ animationDelay: "0.8s" }}>🖌️</div>
-      <div className="hidden lg:block absolute bottom-1/4 right-8 text-2xl animate-float" style={{ animationDelay: "1.3s" }}>🎈</div>
+      <div className="absolute top-2 right-2 md:top-10 md:right-[5%] text-xl md:text-4xl animate-float">⭐</div>
+      <div className="absolute bottom-2 left-2 md:bottom-12 md:left-[4%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
+      <div className="absolute top-2 left-2 md:top-1/3 md:left-[3%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
+      <div className="absolute bottom-2 right-2 md:bottom-1/3 md:right-[4%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.8s" }}>🖌️</div>
+      <div className="hidden lg:block absolute bottom-1/4 right-[7%] text-2xl animate-float" style={{ animationDelay: "1.3s" }}>🎈</div>
       <div className="container mx-auto px-4">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-12">
           O que as alunas dizem
