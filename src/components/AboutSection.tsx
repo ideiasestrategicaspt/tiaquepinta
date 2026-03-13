@@ -1,4 +1,4 @@
-import luanaHero from "@/assets/luana-hero.jpeg";
+import luanaSemFundo from "@/assets/luana-sem-fundo.png";
 
 const AboutSection = () => {
   return (
@@ -7,15 +7,15 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-10 max-w-4xl mx-auto">
           <div className="flex-shrink-0">
             <img
-              src={luanaHero}
+              src={luanaSemFundo}
               alt="Luana Moreira - Tia que Pinta"
-              className="block md:hidden w-48 h-48 rounded-2xl object-cover shadow-card" />
-            
+              className="block md:hidden w-48 h-48 rounded-2xl object-cover shadow-card"
+            />
             <img
-              src={luanaHero}
+              src={luanaSemFundo}
               alt="Logo Tia que Pinta"
-              className="hidden md:block w-56 h-56 object-contain shadow-card rounded-3xl" />
-            
+              className="hidden md:block w-56 h-56 rounded-2xl object-contain shadow-card"
+            />
           </div>
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">
@@ -33,8 +33,8 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default AboutSection;
