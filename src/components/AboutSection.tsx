@@ -1,4 +1,4 @@
-import luanaHero from "@/assets/luana-hero.jpeg";
+import luanaSemFundo from "@/assets/luana-sem-fundo.png";
 
 const AboutSection = () => {
   return (
