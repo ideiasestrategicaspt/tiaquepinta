@@ -27,11 +27,11 @@ const GallerySection = () => {
       <div className="absolute bottom-1/3 right-8 w-36 h-36 rounded-full bg-accent/8 blur-2xl" />
       <BrushStroke className="absolute top-4 left-0 w-72 text-primary" />
       <BrushStroke className="absolute bottom-4 right-0 w-64 text-accent" />
-      <div className="absolute top-12 right-12 text-4xl opacity-40 animate-float">⭐</div>
-      <div className="absolute top-20 left-16 text-3xl opacity-40 animate-float" style={{ animationDelay: "0.6s" }}>🎨</div>
-      <div className="absolute bottom-20 right-20 text-3xl opacity-35 animate-float" style={{ animationDelay: "1s" }}>✨</div>
-      <div className="absolute bottom-12 left-8 text-3xl opacity-40 animate-float" style={{ animationDelay: "0.3s" }}>🖌️</div>
-      <div className="absolute top-1/2 right-6 text-3xl opacity-30 animate-float" style={{ animationDelay: "1.4s" }}>🎈</div>
+      <div className="absolute top-12 right-12 text-4xl animate-float">⭐</div>
+      <div className="absolute top-20 left-16 text-3xl animate-float" style={{ animationDelay: "0.6s" }}>🎨</div>
+      <div className="absolute bottom-20 right-20 text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
+      <div className="absolute bottom-12 left-8 text-3xl animate-float" style={{ animationDelay: "0.3s" }}>🖌️</div>
+      <div className="absolute top-1/2 right-6 text-3xl animate-float" style={{ animationDelay: "1.4s" }}>🎈</div>
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-12">
