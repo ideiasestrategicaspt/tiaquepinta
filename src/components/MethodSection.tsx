@@ -12,7 +12,7 @@ const items = [
 
 const MethodSection = () => {
   return (
-    <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
+    <section className="relative py-16 md:py-24 bg-gradient-to-br from-muted via-purple-100/40 to-muted overflow-hidden">
       <PaintSplash className="absolute -top-10 -left-10 w-48 h-48 text-primary animate-splash-in" />
       <BrushStroke className="absolute top-8 right-0 w-72 text-secondary" />
       <PaintSplash className="absolute -bottom-10 -right-10 w-40 h-40 text-accent animate-splash-in" style={{ animationDelay: "0.5s" }} />

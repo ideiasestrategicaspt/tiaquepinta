@@ -16,7 +16,12 @@ const bonuses = [
 
 const CourseContentSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="relative py-16 md:py-24 bg-gradient-to-b from-background via-purple-50/40 to-background overflow-hidden">
+      {/* Decorative */}
+      <div className="absolute top-10 left-10 text-3xl opacity-15 animate-float">🖌️</div>
+      <div className="absolute bottom-20 right-16 text-2xl opacity-15 animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
+      <div className="absolute top-1/2 right-8 w-24 h-24 rounded-full bg-accent/5 blur-2xl" />
+      <div className="absolute bottom-10 left-1/4 w-32 h-32 rounded-full bg-primary/5 blur-2xl" />
       <div className="container mx-auto px-4">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-10">
           O que está incluso no curso
