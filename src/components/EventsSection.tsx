@@ -5,14 +5,15 @@ import { PaintSplash, BrushStroke } from "./PaintEffects";
 const EventsSection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-br from-purple-50 via-white to-blue-50 overflow-hidden">
-      <PaintSplash className="absolute -top-8 -right-8 w-44 h-44 text-primary/20 animate-splash-in" />
-      <PaintSplash className="absolute -bottom-8 -left-8 w-36 h-36 text-primary animate-splash-in" style={{ animationDelay: "0.3s" }} />
-      <BrushStroke className="absolute bottom-10 right-0 w-60 text-secondary" />
-      <div className="absolute top-12 left-10 text-3xl opacity-20 animate-float">⭐</div>
-      <div className="absolute top-20 right-16 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.5s" }}>🖌️</div>
-      <div className="absolute bottom-16 left-16 text-xl opacity-15 animate-float" style={{ animationDelay: "1s" }}>✨</div>
-      <div className="absolute bottom-20 right-10 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.8s" }}>🎈</div>
-      <div className="absolute top-1/3 left-6 text-xl opacity-15 animate-float" style={{ animationDelay: "1.3s" }}>🎨</div>
+      <PaintSplash className="absolute -top-8 -right-8 w-52 h-52 text-primary/25 animate-splash-in" />
+      <PaintSplash className="absolute -bottom-8 -left-8 w-44 h-44 text-primary/20 animate-splash-in" style={{ animationDelay: "0.3s" }} />
+      <BrushStroke className="absolute bottom-10 right-0 w-72 text-secondary" />
+      <div className="absolute top-12 left-10 text-4xl opacity-40 animate-float">⭐</div>
+      <div className="absolute top-20 right-16 text-3xl opacity-40 animate-float" style={{ animationDelay: "0.5s" }}>🖌️</div>
+      <div className="absolute bottom-16 left-16 text-3xl opacity-35 animate-float" style={{ animationDelay: "1s" }}>✨</div>
+      <div className="absolute bottom-20 right-10 text-3xl opacity-40 animate-float" style={{ animationDelay: "0.8s" }}>🎈</div>
+      <div className="absolute top-1/3 left-6 text-3xl opacity-30 animate-float" style={{ animationDelay: "1.3s" }}>🎨</div>
+      <div className="absolute top-1/2 right-1/4 text-2xl opacity-30 animate-float" style={{ animationDelay: "0.6s" }}>🎉</div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-2xl mx-auto">
