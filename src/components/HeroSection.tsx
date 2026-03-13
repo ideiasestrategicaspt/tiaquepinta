@@ -77,7 +77,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 rounded-full bg-card/20 blur-2xl"></div>
               <img
-                src={luanaHero}
+                src={cursoVdpf}
                 alt="Luana Moreira - Tia que Pinta"
                 className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-3xl object-cover border-4 border-card/30 shadow-card" />
               

@@ -1,4 +1,4 @@
-import logoTia from "@/assets/logo-tia-que-pinta.jpeg";
+import luanaHero from "@/assets/luana-hero.jpeg";
 import luanaHero from "@/assets/luana-hero.jpeg";
 
 const AboutSection = () => {
