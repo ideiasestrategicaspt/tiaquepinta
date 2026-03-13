@@ -1,4 +1,5 @@
 import { Video, BookOpen, FolderOpen, MessageCircle, Award, Package } from "lucide-react";
+import { PaintSplash, BrushStroke } from "./PaintEffects";
 
 const benefits = [
   { icon: Video, title: "Mais de 50 aulas gravadas" },
@@ -17,11 +18,13 @@ const bonuses = [
 const CourseContentSection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-b from-background via-purple-50/40 to-background overflow-hidden">
-      {/* Decorative */}
-      <div className="absolute top-10 left-10 text-3xl opacity-15 animate-float">🖌️</div>
-      <div className="absolute bottom-20 right-16 text-2xl opacity-15 animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
-      <div className="absolute top-1/2 right-8 w-24 h-24 rounded-full bg-accent/5 blur-2xl" />
-      <div className="absolute bottom-10 left-1/4 w-32 h-32 rounded-full bg-primary/5 blur-2xl" />
+      {/* Paint effects */}
+      <PaintSplash className="absolute -top-8 -left-10 w-40 h-40 text-secondary/15 animate-splash-in" />
+      <BrushStroke className="absolute bottom-12 right-0 w-64 text-primary" />
+      <PaintSplash className="absolute -bottom-6 -right-6 w-32 h-32 text-accent/15 animate-splash-in" style={{ animationDelay: "0.6s" }} />
+      <div className="absolute top-10 left-10 text-3xl opacity-20 animate-float">🖌️</div>
+      <div className="absolute bottom-20 right-16 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
+      <div className="absolute top-1/3 right-20 text-xl opacity-15 animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
       <div className="container mx-auto px-4">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-10">
           O que está incluso no curso

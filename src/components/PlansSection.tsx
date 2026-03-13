@@ -212,7 +212,12 @@ const PlansSection = () => {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-muted via-purple-50/30 to-muted">
+    <section className="relative py-16 md:py-24 bg-gradient-to-b from-muted via-purple-50/30 to-muted overflow-hidden">
+      <PaintSplash className="absolute -top-8 -left-10 w-40 h-40 text-accent/10 animate-splash-in" />
+      <BrushStroke className="absolute top-6 right-0 w-64 text-primary" />
+      <PaintSplash className="absolute -bottom-6 -right-8 w-32 h-32 text-secondary/10 animate-splash-in" style={{ animationDelay: "0.4s" }} />
+      <div className="absolute top-16 right-16 text-3xl opacity-20 animate-float">🖌️</div>
+      <div className="absolute bottom-20 left-12 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.6s" }}>⭐</div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">

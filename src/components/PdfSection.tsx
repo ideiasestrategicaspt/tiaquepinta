@@ -1,10 +1,18 @@
 import { WHATSAPP_PDF } from "@/lib/whatsapp";
 import { FileText, Download, Sparkles } from "lucide-react";
+import { PaintSplash, BrushStroke } from "./PaintEffects";
 
 const PdfSection = () => {
   return (
-    <section className="py-10 md:py-24 bg-gradient-to-br from-muted via-white to-muted">
-      <div className="container mx-auto px-4">
+    <section className="relative py-10 md:py-24 bg-gradient-to-br from-muted via-white to-muted overflow-hidden">
+      {/* Paint effects */}
+      <PaintSplash className="absolute -top-6 -left-8 w-36 h-36 text-primary/12 animate-splash-in" />
+      <BrushStroke className="absolute top-8 right-0 w-52 text-accent" />
+      <PaintSplash className="absolute -bottom-8 -right-6 w-28 h-28 text-secondary/12 animate-splash-in" style={{ animationDelay: "0.3s" }} />
+      <div className="absolute top-12 right-16 text-2xl opacity-20 animate-float">🖌️</div>
+      <div className="absolute bottom-16 left-12 text-xl opacity-15 animate-float" style={{ animationDelay: "0.9s" }}>⭐</div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-card border border-border/50 text-center relative overflow-hidden">
           {/* Decorative background */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-100 to-transparent rounded-full opacity-50"></div>
