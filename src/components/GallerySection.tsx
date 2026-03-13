@@ -27,11 +27,11 @@ const GallerySection = () => {
       <div className="absolute bottom-1/3 right-8 w-36 h-36 rounded-full bg-accent/8 blur-2xl" />
       <BrushStroke className="absolute top-4 left-0 w-72 text-primary" />
       <BrushStroke className="absolute bottom-4 right-0 w-64 text-accent" />
-      <div className="absolute top-2 right-2 md:top-8 md:right-4 text-xl md:text-4xl animate-float">⭐</div>
-      <div className="absolute top-2 left-2 md:top-16 md:left-2 text-xl md:text-3xl animate-float" style={{ animationDelay: "0.6s" }}>🎨</div>
-      <div className="absolute bottom-2 right-2 md:bottom-10 md:right-4 text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
-      <div className="absolute bottom-2 left-2 md:bottom-8 md:left-4 text-xl md:text-3xl animate-float" style={{ animationDelay: "0.3s" }}>🖌️</div>
-      <div className="hidden lg:block absolute top-1/2 right-2 text-3xl animate-float" style={{ animationDelay: "1.4s" }}>🎈</div>
+      <div className="absolute top-2 right-2 md:top-10 md:right-[5%] text-xl md:text-4xl animate-float">⭐</div>
+      <div className="absolute top-2 left-2 md:top-20 md:left-[4%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.6s" }}>🎨</div>
+      <div className="absolute bottom-2 right-2 md:bottom-14 md:right-[6%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
+      <div className="absolute bottom-2 left-2 md:bottom-12 md:left-[5%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.3s" }}>🖌️</div>
+      <div className="hidden lg:block absolute top-1/2 right-[3%] text-3xl animate-float" style={{ animationDelay: "1.4s" }}>🎈</div>
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-12">
