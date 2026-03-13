@@ -16,13 +16,13 @@ const AboutSection = () => {
             <img
               src={luanaSemFundo}
               alt="Luana Moreira - Tia que Pinta"
-              className="block md:hidden w-48 h-48 rounded-2xl object-cover shadow-card"
-            />
+              className="block md:hidden w-48 h-48 rounded-2xl object-cover shadow-card" />
+            
             <img
               src={luanaSemFundo}
               alt="Logo Tia que Pinta"
-              className="hidden md:block w-56 h-56 rounded-2xl object-contain shadow-card"
-            />
+              className="hidden md:block w-56 h-56 rounded-2xl object-contain shadow-card" />
+            
           </div>
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">
@@ -34,14 +34,14 @@ const AboutSection = () => {
             <p className="font-body text-foreground/80 text-lg leading-relaxed mb-4">
               Criadora do <strong>Método VDPF – Vivendo de Pintura Facial</strong>, que ensina pessoas a aprender pintura facial do zero e transformar essa habilidade em uma fonte de renda trabalhando em festas e eventos.
             </p>
-            <p className="font-body text-foreground/80 text-lg leading-relaxed">
-              Também é criadora da <strong>Comunidade Somos os Artistas</strong>, um espaço de conexão e troca entre profissionais da pintura facial.
-            </p>
+            
+
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
