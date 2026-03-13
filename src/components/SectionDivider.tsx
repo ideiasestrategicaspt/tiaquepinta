@@ -14,9 +14,10 @@ interface Props {
   variant?: keyof typeof waves;
   className?: string; // fill color via text-* class
   flip?: boolean;
+  shadow?: boolean;
 }
 
-const SectionDivider = ({ variant = "wave", className = "text-background", flip = false }: Props) => (
+const SectionDivider = ({ variant = "wave", className = "text-background", flip = false, shadow = false }: Props) => (
   <div
     className={`relative w-full overflow-hidden leading-[0] ${flip ? "rotate-180" : ""}`}
     style={{ marginTop: "-1px", marginBottom: "-1px" }}
@@ -26,6 +27,7 @@ const SectionDivider = ({ variant = "wave", className = "text-background", flip 
       preserveAspectRatio="none"
       className={`block w-full h-16 md:h-20 ${className}`}
       xmlns="http://www.w3.org/2000/svg"
+      style={shadow ? { filter: "drop-shadow(0 -4px 6px rgba(0,0,0,0.08))" } : undefined}
     >
       <path d={waves[variant]} fill="currentColor" />
     </svg>
