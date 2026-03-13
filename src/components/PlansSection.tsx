@@ -147,7 +147,7 @@ const PlansSection = () => {
     };
 
     return (
-      <section className="py-16 bg-muted overflow-hidden">
+      <section className="py-16 bg-gradient-to-b from-muted via-purple-50/30 to-muted overflow-hidden">
         <div className="px-4">
           <div className="text-center mb-10">
             <h2 className="font-display text-3xl font-bold text-gradient mb-4">
