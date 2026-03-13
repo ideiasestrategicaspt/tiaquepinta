@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { PaintSplash, BrushStroke } from "./PaintEffects";
 
 const testimonials = [
   {
@@ -36,11 +37,13 @@ const TestimonialsSection = () => {
 
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-br from-blue-50/50 via-background to-purple-50/50 overflow-hidden">
-      {/* Decorative */}
-      <div className="absolute top-8 right-12 text-3xl opacity-15 animate-float">💬</div>
-      <div className="absolute bottom-12 left-8 text-2xl opacity-15 animate-float" style={{ animationDelay: "0.5s" }}>⭐</div>
-      <div className="absolute top-1/3 left-4 w-28 h-28 rounded-full bg-secondary/5 blur-2xl" />
-      <div className="absolute bottom-1/4 right-8 w-36 h-36 rounded-full bg-primary/5 blur-2xl" />
+      {/* Paint effects */}
+      <PaintSplash className="absolute -top-6 -right-8 w-36 h-36 text-primary/15 animate-splash-in" />
+      <BrushStroke className="absolute top-10 left-0 w-56 text-accent" />
+      <PaintSplash className="absolute -bottom-8 -left-6 w-28 h-28 text-secondary/15 animate-splash-in" style={{ animationDelay: "0.5s" }} />
+      <div className="absolute top-8 right-12 text-3xl opacity-20 animate-float">⭐</div>
+      <div className="absolute bottom-12 left-8 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
+      <div className="absolute top-1/2 left-20 text-xl opacity-15 animate-float" style={{ animationDelay: "1s" }}>✨</div>
       <div className="container mx-auto px-4">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-12">
           O que as alunas dizem
