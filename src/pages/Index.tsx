@@ -16,13 +16,14 @@ const Index = () => {
   return (
     <main className="overflow-hidden">
       <HeroSection />
-      <SectionDivider variant="paint" className="text-purple-50/80" />
+      <SectionDivider variant="paint" className="text-purple-50/80" shadow />
 
       <ScrollReveal variant="fade-up">
         <AboutSection />
       </ScrollReveal>
 
-      <SectionDivider variant="wave" className="text-muted" />
+      <SectionDivider variant="paint" className="text-purple-50/80" flip shadow />
+      <SectionDivider variant="wave" className="text-muted" shadow />
 
       <ScrollReveal variant="fade-up" delay={100}>
         <MethodSection />
