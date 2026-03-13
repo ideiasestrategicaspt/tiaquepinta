@@ -27,6 +27,11 @@ const GallerySection = () => {
       <div className="absolute bottom-1/3 right-8 w-28 h-28 rounded-full bg-accent/5 blur-2xl" />
       <BrushStroke className="absolute top-4 left-0 w-64 text-primary" />
       <BrushStroke className="absolute bottom-4 right-0 w-56 text-accent" />
+      <div className="absolute top-12 right-12 text-3xl opacity-20 animate-float">⭐</div>
+      <div className="absolute top-20 left-16 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.6s" }}>🎨</div>
+      <div className="absolute bottom-20 right-20 text-xl opacity-15 animate-float" style={{ animationDelay: "1s" }}>✨</div>
+      <div className="absolute bottom-12 left-8 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.3s" }}>🖌️</div>
+      <div className="absolute top-1/2 right-6 text-xl opacity-15 animate-float" style={{ animationDelay: "1.4s" }}>🎈</div>
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-12">

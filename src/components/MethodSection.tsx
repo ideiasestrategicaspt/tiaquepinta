@@ -16,6 +16,10 @@ const MethodSection = () => {
       <PaintSplash className="absolute -top-10 -left-10 w-48 h-48 text-primary animate-splash-in" />
       <BrushStroke className="absolute top-8 right-0 w-72 text-secondary" />
       <PaintSplash className="absolute -bottom-10 -right-10 w-40 h-40 text-accent animate-splash-in" style={{ animationDelay: "0.5s" }} />
+      <div className="absolute top-16 left-12 text-3xl opacity-20 animate-float">⭐</div>
+      <div className="absolute top-24 right-16 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.7s" }}>🎨</div>
+      <div className="absolute bottom-16 left-20 text-xl opacity-15 animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
+      <div className="absolute bottom-24 right-8 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.4s" }}>🖌️</div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
