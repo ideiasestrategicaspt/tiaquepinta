@@ -24,8 +24,11 @@ const AboutSection = () => {
             <p className="font-body text-foreground/80 text-lg leading-relaxed mb-4">
               <strong>Luana Moreira</strong> é artista especializada em pintura facial infantil desde 2012 em Vila Velha – ES.
             </p>
-            <p className="font-body text-foreground/80 text-lg leading-relaxed">
+            <p className="font-body text-foreground/80 text-lg leading-relaxed mb-4">
               Criadora do <strong>Método VDPF – Vivendo de Pintura Facial</strong>, que ensina pessoas a aprender pintura facial do zero e transformar essa habilidade em uma fonte de renda trabalhando em festas e eventos.
+            </p>
+            <p className="font-body text-foreground/80 text-lg leading-relaxed">
+              Também é criadora da <strong>Comunidade Somos os Artistas</strong>, um espaço de conexão e troca entre profissionais da pintura facial.
             </p>
           </div>
         </div>
