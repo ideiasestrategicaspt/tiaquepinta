@@ -1,6 +1,6 @@
 import { WHATSAPP_FESTA } from "@/lib/whatsapp";
 import { MapPin, Calendar, Users } from "lucide-react";
-import { PaintSplash } from "./PaintEffects";
+import { PaintSplash, BrushStroke } from "./PaintEffects";
 
 const EventsSection = () => {
   return (
