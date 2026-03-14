@@ -4,7 +4,7 @@ import { Star, Users, Instagram, ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden gradient-hero min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden min-h-[90vh] flex items-center" style={{ background: "linear-gradient(135deg, hsl(265 70% 55%), hsl(152 80% 45%))" }}>
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 text-5xl animate-float" style={{ animationDelay: "0s" }}>⭐</div>
