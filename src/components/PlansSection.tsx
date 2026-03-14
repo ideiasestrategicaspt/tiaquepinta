@@ -130,18 +130,15 @@ const PlansSection = () => {
   }, [activeIndex, scrollToIndex]);
 
   if (isMobile) {
-    // Get transform styles for stacked carousel
     const getCardStyle = (i: number): React.CSSProperties => {
       const diff = i - activeIndex;
       if (diff === 0) {
         return { transform: 'translateX(0) scale(1)', zIndex: 3, opacity: 1, filter: 'blur(0px)' };
       }
       if (diff === -1 || (diff === plans.length - 1)) {
-        // Card to the left (behind)
         return { transform: 'translateX(-30%) scale(0.88)', zIndex: 1, opacity: 0.5, filter: 'blur(3px)' };
       }
       if (diff === 1 || (diff === -(plans.length - 1))) {
-        // Card to the right (behind)
         return { transform: 'translateX(30%) scale(0.88)', zIndex: 1, opacity: 0.5, filter: 'blur(3px)' };
       }
       return { transform: 'translateX(0) scale(0.8)', zIndex: 0, opacity: 0, filter: 'blur(5px)' };
@@ -149,8 +146,8 @@ const PlansSection = () => {
 
     return (
       <section className="relative py-16 bg-gradient-to-b from-muted via-purple-50/30 to-muted overflow-hidden">
-        <PaintSplash className="absolute -top-8 -right-8 w-36 h-36 text-primary/10 animate-splash-in" />
-        <BrushStroke className="absolute bottom-8 left-0 w-60 text-secondary" />
+        <PaintSplash className="absolute -top-8 -right-8 w-36 h-36 animate-splash-in" gradient={{ from: "#F855B0", to: "#FFA5A9" }} />
+        <BrushStroke className="absolute bottom-8 left-0 w-60" gradient={{ from: "#FFC235", to: "#8DC605" }} />
         <div className="absolute top-12 left-8 text-2xl opacity-20 animate-float">⭐</div>
         <div className="absolute bottom-16 right-12 text-xl opacity-15 animate-float" style={{ animationDelay: "0.8s" }}>✨</div>
         <div className="px-4">
@@ -213,9 +210,9 @@ const PlansSection = () => {
 
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-b from-muted via-purple-50/30 to-muted overflow-hidden">
-      <PaintSplash className="absolute -top-8 -left-10 w-40 h-40 text-accent/10 animate-splash-in" />
-      <BrushStroke className="absolute top-6 right-0 w-64 text-primary" />
-      <PaintSplash className="absolute -bottom-6 -right-8 w-32 h-32 text-secondary/10 animate-splash-in" style={{ animationDelay: "0.4s" }} />
+      <PaintSplash className="absolute -top-8 -left-10 w-40 h-40 animate-splash-in" gradient={{ from: "#DE70D2", to: "#95B2D1" }} />
+      <BrushStroke className="absolute top-6 right-0 w-64" gradient={{ from: "#00A3EB", to: "#F0CA61" }} />
+      <PaintSplash className="absolute -bottom-6 -right-8 w-32 h-32 animate-splash-in" style={{ animationDelay: "0.4s" }} gradient={{ from: "#FFC235", to: "#F855B0" }} />
       <div className="absolute top-16 right-16 text-3xl opacity-20 animate-float">🖌️</div>
       <div className="absolute bottom-20 left-12 text-2xl opacity-20 animate-float" style={{ animationDelay: "0.6s" }}>⭐</div>
       <div className="container mx-auto px-4">

@@ -5,9 +5,9 @@ import { PaintSplash, BrushStroke } from "./PaintEffects";
 const EventsSection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-br from-purple-50 via-white to-blue-50 overflow-hidden">
-      <PaintSplash className="absolute -top-8 -right-8 w-52 h-52 text-primary/30 animate-splash-in" />
-      <PaintSplash className="absolute -bottom-8 -left-8 w-44 h-44 text-primary/25 animate-splash-in" style={{ animationDelay: "0.3s" }} />
-      <BrushStroke className="absolute bottom-10 right-0 w-72 text-secondary" />
+      <PaintSplash className="absolute -top-8 -right-8 w-52 h-52 animate-splash-in" gradient={{ from: "#FFC235", to: "#F855B0" }} />
+      <PaintSplash className="absolute -bottom-8 -left-8 w-44 h-44 animate-splash-in" style={{ animationDelay: "0.3s" }} gradient={{ from: "#8DC605", to: "#96B8CB" }} />
+      <BrushStroke className="absolute bottom-10 right-0 w-72" gradient={{ from: "#00A3EB", to: "#DE70D2" }} />
       <div className="absolute top-2 left-2 md:top-10 md:left-[5%] text-xl md:text-4xl animate-float">⭐</div>
       <div className="absolute top-2 right-2 md:top-20 md:right-[6%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🖌️</div>
       <div className="absolute bottom-2 left-2 md:bottom-12 md:left-[4%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>

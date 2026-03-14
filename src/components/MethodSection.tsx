@@ -13,9 +13,9 @@ const items = [
 const MethodSection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-br from-muted via-purple-100/40 to-muted overflow-hidden">
-      <PaintSplash className="absolute -top-10 -left-10 w-56 h-56 text-primary/30 animate-splash-in" />
-      <BrushStroke className="absolute top-8 right-0 w-80 text-secondary" />
-      <PaintSplash className="absolute -bottom-10 -right-10 w-48 h-48 text-accent/30 animate-splash-in" style={{ animationDelay: "0.5s" }} />
+      <PaintSplash className="absolute -top-10 -left-10 w-56 h-56 animate-splash-in" gradient={{ from: "#FFC235", to: "#F0CA61" }} />
+      <BrushStroke className="absolute top-8 right-0 w-80" gradient={{ from: "#DE70D2", to: "#F855B0" }} />
+      <PaintSplash className="absolute -bottom-10 -right-10 w-48 h-48 animate-splash-in" style={{ animationDelay: "0.5s" }} gradient={{ from: "#8DC605", to: "#00A3EB" }} />
       <div className="absolute top-2 left-2 md:top-10 md:left-[4%] text-xl md:text-4xl animate-float">⭐</div>
       <div className="absolute top-2 right-2 md:top-20 md:right-[5%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.7s" }}>🎨</div>
       <div className="absolute bottom-2 left-2 md:bottom-12 md:left-[6%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>

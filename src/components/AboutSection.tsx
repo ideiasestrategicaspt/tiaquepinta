@@ -5,8 +5,8 @@ const AboutSection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-br from-purple-50/80 via-background to-blue-50/60 overflow-hidden">
       {/* Decorative elements */}
-      <PaintSplash className="absolute -top-6 -right-6 w-48 h-48 text-primary/30 animate-splash-in" />
-      <PaintSplash className="absolute -bottom-8 -left-8 w-40 h-40 text-secondary/30 animate-splash-in" style={{ animationDelay: "0.4s" }} />
+      <PaintSplash className="absolute -top-6 -right-6 w-48 h-48 animate-splash-in" gradient={{ from: "#F855B0", to: "#FFA5A9" }} />
+      <PaintSplash className="absolute -bottom-8 -left-8 w-40 h-40 animate-splash-in" style={{ animationDelay: "0.4s" }} gradient={{ from: "#00A3EB", to: "#95B2D1" }} />
       <div className="absolute top-2 right-2 md:top-12 md:right-[6%] text-xl md:text-4xl animate-float" style={{ animationDelay: "0.3s" }}>🎨</div>
       <div className="absolute bottom-2 left-2 md:bottom-14 md:left-[5%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
       <div className="absolute top-2 left-2 md:top-1/3 md:left-[3%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
@@ -36,14 +36,10 @@ const AboutSection = () => {
             <p className="font-body text-foreground/80 text-lg leading-relaxed mb-4">
               Criadora da <strong>Comunidade Somos os Artistas</strong> e <strong>Método VDPF – Vivendo de Pintura Facial</strong>, que ensina pessoas a aprender pintura facial do zero e transformar essa habilidade em uma fonte de renda trabalhando em festas e eventos.
             </p>
-            
-
-            
           </div>
         </div>
       </div>
     </section>);
-
 };
 
 export default AboutSection;
