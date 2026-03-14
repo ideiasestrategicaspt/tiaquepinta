@@ -1,4 +1,5 @@
 import cursoVdpfAvatar from "@/assets/curso-vdpf-avatar.jpeg";
+import luanaSemFundo from "@/assets/luana-sem-fundo.png";
 import { PaintSplash } from "./PaintEffects";
 
 const AboutSection = () => {
