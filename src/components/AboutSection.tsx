@@ -22,7 +22,7 @@ const AboutSection = () => {
               className="block md:hidden w-48 h-48 rounded-2xl object-cover shadow-card" />
             
             <img
-              src={cursoVdpfAvatar}
+              src={luanaSemFundo}
               alt="Logo Tia que Pinta"
               className="hidden md:block w-56 h-56 rounded-2xl object-contain shadow-card" />
             
