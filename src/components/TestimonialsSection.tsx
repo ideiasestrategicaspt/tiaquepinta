@@ -38,9 +38,9 @@ const TestimonialsSection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-br from-blue-50/50 via-background to-purple-50/50 overflow-hidden">
       {/* Paint effects */}
-      <PaintSplash className="absolute -top-6 -right-8 w-44 h-44 text-primary/30 animate-splash-in" />
-      <BrushStroke className="absolute top-10 left-0 w-64 text-accent" />
-      <PaintSplash className="absolute -bottom-8 -left-6 w-36 h-36 text-secondary/30 animate-splash-in" style={{ animationDelay: "0.5s" }} />
+      <PaintSplash className="absolute -top-6 -right-8 w-44 h-44 animate-splash-in" gradient={{ from: "#FFA5A9", to: "#F855B0" }} />
+      <BrushStroke className="absolute top-10 left-0 w-64" gradient={{ from: "#8DC605", to: "#FFC235" }} />
+      <PaintSplash className="absolute -bottom-8 -left-6 w-36 h-36 animate-splash-in" style={{ animationDelay: "0.5s" }} gradient={{ from: "#00A3EB", to: "#DE70D2" }} />
       <div className="absolute top-2 right-2 md:top-10 md:right-[5%] text-xl md:text-4xl animate-float">⭐</div>
       <div className="absolute bottom-2 left-2 md:bottom-12 md:left-[4%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
       <div className="absolute top-2 left-2 md:top-1/3 md:left-[3%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>

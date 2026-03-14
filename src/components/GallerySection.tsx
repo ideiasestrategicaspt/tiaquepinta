@@ -23,10 +23,10 @@ const GallerySection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-br from-muted via-blue-50/40 to-muted overflow-hidden">
       {/* Extra decorative blobs */}
-      <div className="absolute top-1/4 left-4 w-40 h-40 rounded-full bg-primary/8 blur-2xl" />
-      <div className="absolute bottom-1/3 right-8 w-36 h-36 rounded-full bg-accent/8 blur-2xl" />
-      <BrushStroke className="absolute top-4 left-0 w-72 text-primary" />
-      <BrushStroke className="absolute bottom-4 right-0 w-64 text-accent" />
+      <div className="absolute top-1/4 left-4 w-40 h-40 rounded-full blur-2xl" style={{ background: "hsl(40 100% 60% / 0.08)" }} />
+      <div className="absolute bottom-1/3 right-8 w-36 h-36 rounded-full blur-2xl" style={{ background: "hsl(330 93% 65% / 0.08)" }} />
+      <BrushStroke className="absolute top-4 left-0 w-72" gradient={{ from: "#96B8CB", to: "#00A3EB" }} />
+      <BrushStroke className="absolute bottom-4 right-0 w-64" gradient={{ from: "#F0CA61", to: "#8DC605" }} />
       <div className="absolute top-2 right-2 md:top-10 md:right-[5%] text-xl md:text-4xl animate-float">⭐</div>
       <div className="absolute top-2 left-2 md:top-20 md:left-[4%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.6s" }}>🎨</div>
       <div className="absolute bottom-2 right-2 md:bottom-14 md:right-[6%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>

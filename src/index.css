@@ -54,6 +54,17 @@
 
     --font-display: 'Baloo 2', cursive;
     --font-body: 'Montserrat', sans-serif;
+
+    /* Decorative palette */
+    --deco-lime: 76 100% 40%;
+    --deco-pink: 330 93% 65%;
+    --deco-salmon: 357 100% 82%;
+    --deco-blue: 199 100% 46%;
+    --deco-steel: 212 35% 70%;
+    --deco-orchid: 310 60% 66%;
+    --deco-amber: 40 100% 60%;
+    --deco-gold: 44 83% 66%;
+    --deco-slate: 210 30% 69%;
   }
 }
 

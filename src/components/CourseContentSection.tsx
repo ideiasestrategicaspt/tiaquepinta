@@ -19,9 +19,9 @@ const CourseContentSection = () => {
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-b from-background via-purple-50/40 to-background overflow-hidden">
       {/* Paint effects */}
-      <PaintSplash className="absolute -top-8 -left-10 w-48 h-48 text-secondary/30 animate-splash-in" />
-      <BrushStroke className="absolute bottom-12 right-0 w-72 text-primary" />
-      <PaintSplash className="absolute -bottom-6 -right-6 w-40 h-40 text-accent/30 animate-splash-in" style={{ animationDelay: "0.6s" }} />
+      <PaintSplash className="absolute -top-8 -left-10 w-48 h-48 animate-splash-in" gradient={{ from: "#00A3EB", to: "#96B8CB" }} />
+      <BrushStroke className="absolute bottom-12 right-0 w-72" gradient={{ from: "#FFC235", to: "#F0CA61" }} />
+      <PaintSplash className="absolute -bottom-6 -right-6 w-40 h-40 animate-splash-in" style={{ animationDelay: "0.6s" }} gradient={{ from: "#DE70D2", to: "#FFA5A9" }} />
       <div className="absolute top-2 left-2 md:top-10 md:left-[4%] text-xl md:text-4xl animate-float">🖌️</div>
       <div className="absolute top-2 right-2 md:top-16 md:right-[5%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
       <div className="absolute bottom-2 right-2 md:bottom-14 md:right-[4%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
