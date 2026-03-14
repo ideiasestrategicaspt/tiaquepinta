@@ -7,12 +7,12 @@ const HeroSection = () => {
     <section className="relative overflow-hidden min-h-[90vh] flex items-center" style={{ background: "linear-gradient(135deg, hsl(265 70% 55%), hsl(152 80% 45%))" }}>
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 text-5xl animate-float" style={{ animationDelay: "0s" }}>⭐</div>
-        <div className="absolute top-20 right-20 text-4xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
-        <div className="absolute bottom-20 left-20 text-4xl animate-float" style={{ animationDelay: "1s" }}>🎈</div>
-        <div className="absolute bottom-40 right-10 text-5xl animate-float" style={{ animationDelay: "1.5s" }}>✨</div>
-        <div className="absolute top-1/3 left-1/4 text-3xl animate-float" style={{ animationDelay: "0.8s" }}>🖌️</div>
-        <div className="absolute bottom-1/3 right-1/4 text-3xl animate-float" style={{ animationDelay: "1.2s" }}>🎉</div>
+        <div className="hidden md:block absolute top-10 left-10 text-5xl animate-float" style={{ animationDelay: "0s" }}>⭐</div>
+        <div className="hidden md:block absolute top-20 right-20 text-4xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
+        <div className="hidden md:block absolute bottom-20 left-20 text-4xl animate-float" style={{ animationDelay: "1s" }}>🎈</div>
+        <div className="hidden md:block absolute bottom-40 right-10 text-5xl animate-float" style={{ animationDelay: "1.5s" }}>✨</div>
+        <div className="hidden md:block absolute top-1/3 left-1/4 text-3xl animate-float" style={{ animationDelay: "0.8s" }}>🖌️</div>
+        <div className="hidden md:block absolute bottom-1/3 right-1/4 text-3xl animate-float" style={{ animationDelay: "1.2s" }}>🎉</div>
       </div>
 
       {/* Mobile-only animated background bubbles */}

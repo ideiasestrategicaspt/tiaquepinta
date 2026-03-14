@@ -1,4 +1,4 @@
-import luanaSemFundo from "@/assets/luana-sem-fundo.png";
+import cursoVdpfAvatar from "@/assets/curso-vdpf-avatar.jpeg";
 import { PaintSplash } from "./PaintEffects";
 
 const AboutSection = () => {
@@ -16,12 +16,12 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-10 max-w-4xl mx-auto">
           <div className="flex-shrink-0">
             <img
-              src={luanaSemFundo}
+              src={cursoVdpfAvatar}
               alt="Luana Moreira - Tia que Pinta"
               className="block md:hidden w-48 h-48 rounded-2xl object-cover shadow-card" />
             
             <img
-              src={luanaSemFundo}
+              src={cursoVdpfAvatar}
               alt="Logo Tia que Pinta"
               className="hidden md:block w-56 h-56 rounded-2xl object-contain shadow-card" />
             
