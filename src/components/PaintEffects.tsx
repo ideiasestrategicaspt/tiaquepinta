@@ -60,7 +60,7 @@ const BrushStroke = ({
         stroke={gradient ? `url(#${id})` : "currentColor"}
         strokeWidth="6"
         fill="none"
-        opacity="0.1"
+        opacity="0.18"
         strokeLinecap="round"
         className="animate-brush-draw"
       />
