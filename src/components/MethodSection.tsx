@@ -1,4 +1,4 @@
-import { Palette, Brush, Sparkles, Image, Calendar, BookOpen } from "lucide-react";
+import { Palette, Brush, Sparkles, Image, Calendar } from "lucide-react";
 import { PaintSplash, BrushStroke } from "./PaintEffects";
 
 const items = [
