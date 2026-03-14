@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <main className="overflow-hidden">
       <HeroSection />
-      <SectionDivider variant="paint" className="text-purple-50/80" shadow />
+      <SectionDivider variant="paint" gradient={{ from: "hsl(265 70% 55%)", to: "hsl(152 80% 45%)", id: "hero-divider" }} shadow />
 
       <ScrollReveal variant="fade-up">
         <AboutSection />
