@@ -15,23 +15,38 @@ interface Props {
   className?: string; // fill color via text-* class
   flip?: boolean;
   shadow?: boolean;
+  gradient?: { from: string; to: string; id?: string };
 }
 
-const SectionDivider = ({ variant = "wave", className = "text-background", flip = false, shadow = false }: Props) => (
-  <div
-    className={`relative w-full overflow-hidden leading-[0] ${flip ? "rotate-180" : ""}`}
-    style={{ marginTop: "-1px", marginBottom: "-1px" }}
-  >
-    <svg
-      viewBox="0 0 1440 128"
-      preserveAspectRatio="none"
-      className={`block w-full h-16 md:h-20 ${className}`}
-      xmlns="http://www.w3.org/2000/svg"
-      style={shadow ? { filter: "drop-shadow(0 -4px 6px rgba(0,0,0,0.08))" } : undefined}
+let gradientCounter = 0;
+
+const SectionDivider = ({ variant = "wave", className = "text-background", flip = false, shadow = false, gradient }: Props) => {
+  const gradientId = gradient?.id || `divider-grad-${++gradientCounter}`;
+
+  return (
+    <div
+      className={`relative w-full overflow-hidden leading-[0] ${flip ? "rotate-180" : ""}`}
+      style={{ marginTop: "-1px", marginBottom: "-1px" }}
     >
-      <path d={waves[variant]} fill="currentColor" />
-    </svg>
-  </div>
-);
+      <svg
+        viewBox="0 0 1440 128"
+        preserveAspectRatio="none"
+        className={`block w-full h-16 md:h-20 ${gradient ? "" : className}`}
+        xmlns="http://www.w3.org/2000/svg"
+        style={shadow ? { filter: "drop-shadow(0 -4px 6px rgba(0,0,0,0.08))" } : undefined}
+      >
+        {gradient && (
+          <defs>
+            <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor={gradient.from} />
+              <stop offset="100%" stopColor={gradient.to} />
+            </linearGradient>
+          </defs>
+        )}
+        <path d={waves[variant]} fill={gradient ? `url(#${gradientId})` : "currentColor"} />
+      </svg>
+    </div>
+  );
+};
 
 export default SectionDivider;
