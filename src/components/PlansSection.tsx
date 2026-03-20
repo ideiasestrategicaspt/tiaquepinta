@@ -8,8 +8,8 @@ const plans = [
   {
     name: "Curso Básico",
     access: "3 meses de acesso",
-    price: "R$ 450",
-    priceNote: "ou 12x de R$ 45",
+    price: "R$ 250",
+    priceNote: "ou 12x de R$ 25",
     link: WHATSAPP_PLANO_BASICO,
     featured: false,
     features: [
