@@ -5,95 +5,95 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { PaintSplash, BrushStroke } from "./PaintEffects";
 
 const plans = [
-  {
-    name: "Curso Básico",
-    access: "3 meses de acesso",
-    price: "R$ 250",
-    priceNote: "ou 12x de R$ 25",
-    link: WHATSAPP_PLANO_BASICO,
-    featured: false,
-    features: [
-      "Mais de 50 aulas gravadas passo a passo",
-      "Técnicas fundamentais de pintura facial",
-      "Desenhos infantis que fazem sucesso em festas",
-      "Apostila completa para prática",
-      "Certificado de participação"
-    ]
-  },
-  {
-    name: "Curso Essencial",
-    access: "7 meses de acesso",
-    price: "R$ 847",
-    priceNote: "ou 12x de R$ 84,70",
-    link: WHATSAPP_PLANO_ESSENCIAL,
-    featured: true,
-    features: [
-      "Acesso estendido para praticar as técnicas com calma",
-      "Grupo exclusivo de suporte no WhatsApp",
-      "Aulas bônus com novos desenhos e técnicas",
-      "Certificado de participação"
-    ],
-    badge: "⭐ Plano mais escolhido pelas alunas"
-  },
-  {
-    name: "Curso Vitalício",
-    access: "Acesso ilimitado",
-    price: "R$ 1.097",
-    priceNote: "ou 12x de R$ 109,70",
-    link: WHATSAPP_PLANO_VITALICIO,
-    featured: false,
-    features: [
-      "Acesso permanente ao curso",
-      "Todas as futuras atualizações do Método VDPF",
-      "Conteúdos novos adicionados ao longo do tempo",
-      "Mentorias ao vivo exclusivas",
-      "Comunidade de alunas para troca de experiências"
-    ]
-  }
-];
+{
+  name: "Curso Básico",
+  access: "3 meses de acesso",
+  price: "R$ 250",
+  priceNote: "ou 12x de R$ 25",
+  link: WHATSAPP_PLANO_BASICO,
+  featured: false,
+  features: [
+  "Mais de 50 aulas gravadas passo a passo",
+  "Técnicas fundamentais de pintura facial",
+  "Desenhos infantis que fazem sucesso em festas",
+  "Apostila completa para prática",
+  "Certificado de participação"]
 
-const PlanCard = ({ plan }: { plan: typeof plans[0]; isActive?: boolean }) => (
-  <div
-    className={`relative rounded-3xl p-6 sm:p-8 text-center transition-all duration-500 ${
-      plan.featured
-        ? "bg-gradient-to-br from-card to-purple-50 border-2 border-primary shadow-card-hover md:scale-105"
-        : "bg-card shadow-card"
-    }`}
-    style={{ minWidth: 0 }}
-  >
-    {plan.featured && (
-      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-2 rounded-lg font-display text-sm font-bold shadow-button whitespace-nowrap">
+},
+{
+  name: "Curso Essencial",
+  access: "7 meses de acesso",
+  price: "R$ 847",
+  priceNote: "ou 12x de R$ 84,70",
+  link: WHATSAPP_PLANO_ESSENCIAL,
+  featured: true,
+  features: [
+  "Acesso estendido para praticar as técnicas com calma",
+  "Grupo exclusivo de suporte no WhatsApp",
+  "Aulas bônus com novos desenhos e técnicas",
+  "Certificado de participação"],
+
+  badge: "⭐ Plano mais escolhido pelas alunas"
+},
+{
+  name: "Curso Vitalício",
+  access: "Acesso ilimitado",
+  price: "R$ 1.097",
+  priceNote: "ou 12x de R$ 109,70",
+  link: WHATSAPP_PLANO_VITALICIO,
+  featured: false,
+  features: [
+  "Acesso permanente ao curso",
+  "Todas as futuras atualizações do Método VDPF",
+  "Conteúdos novos adicionados ao longo do tempo",
+  "Mentorias ao vivo exclusivas",
+  "Comunidade de alunas para troca de experiências"]
+
+}];
+
+
+const PlanCard = ({ plan }: {plan: typeof plans[0];isActive?: boolean;}) =>
+<div
+  className={`relative rounded-3xl p-6 sm:p-8 text-center transition-all duration-500 ${
+  plan.featured ?
+  "bg-gradient-to-br from-card to-purple-50 border-2 border-primary shadow-card-hover md:scale-105" :
+  "bg-card shadow-card"}`
+  }
+  style={{ minWidth: 0 }}>
+  
+    {plan.featured &&
+  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-2 rounded-lg font-display text-sm font-bold shadow-button whitespace-nowrap">
         {plan.badge || "Mais Popular"}
       </div>
-    )}
+  }
 
     <h3 className="font-display text-xl sm:text-2xl font-bold mb-1 sm:mb-2 text-foreground">{plan.name}</h3>
     <p className="font-body text-xs sm:text-sm mb-3 sm:mb-4 text-muted-foreground">{plan.access}</p>
 
     <div className="mb-4 sm:mb-6">
-      <p className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient whitespace-nowrap">{plan.priceNote.replace("ou ", "")}</p>
-      <p className="font-body text-sm sm:text-base text-muted-foreground mt-2">ou <span className="font-semibold text-foreground">{plan.price}</span> à vista</p>
+      <p className="font-display text-3xl sm:text-4xl font-bold text-gradient whitespace-nowrap md:text-4xl">{plan.priceNote.replace("ou ", "")}</p>
+      <p className="font-body text-sm text-muted-foreground mt-2 sm:text-xs">ou <span className="font-semibold text-foreground">{plan.price}</span> à vista</p>
     </div>
 
     <ul className="text-left space-y-2 mb-5 sm:mb-6 text-xs sm:text-sm">
-      {plan.features.map((feature, j) => (
-        <li key={j} className="flex items-start gap-2 text-foreground/80">
+      {plan.features.map((feature, j) =>
+    <li key={j} className="flex items-start gap-2 text-foreground/80">
           <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
           <span className="font-body">{feature}</span>
         </li>
-      ))}
+    )}
     </ul>
 
     <a
-      href={plan.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`btn-cta w-full text-base sm:text-lg ${plan.featured ? "btn-cta-pulse animate-micro-bounce" : ""}`}
-    >
+    href={plan.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`btn-cta w-full text-base sm:text-lg ${plan.featured ? "btn-cta-pulse animate-micro-bounce" : ""}`}>
+    
       Quero entrar no curso
     </a>
-  </div>
-);
+  </div>;
+
 
 const PlansSection = () => {
   const isMobile = useIsMobile();
@@ -135,10 +135,10 @@ const PlansSection = () => {
       if (diff === 0) {
         return { transform: 'translateX(0) scale(1)', zIndex: 3, opacity: 1, filter: 'blur(0px)' };
       }
-      if (diff === -1 || (diff === plans.length - 1)) {
+      if (diff === -1 || diff === plans.length - 1) {
         return { transform: 'translateX(-30%) scale(0.88)', zIndex: 1, opacity: 0.5, filter: 'blur(3px)' };
       }
-      if (diff === 1 || (diff === -(plans.length - 1))) {
+      if (diff === 1 || diff === -(plans.length - 1)) {
         return { transform: 'translateX(30%) scale(0.88)', zIndex: 1, opacity: 0.5, filter: 'blur(3px)' };
       }
       return { transform: 'translateX(0) scale(0.8)', zIndex: 0, opacity: 0, filter: 'blur(5px)' };
@@ -167,45 +167,45 @@ const PlansSection = () => {
           style={{ minHeight: 480 }}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
+          onTouchEnd={handleTouchEnd}>
+          
           <div className="relative w-full" style={{ maxWidth: '85%', margin: '0 auto' }}>
-            {plans.map((plan, i) => (
-              <div
-                key={plan.name}
-                className="transition-all duration-500 ease-out"
-                style={{
-                  ...getCardStyle(i),
-                  position: i === activeIndex ? 'relative' : 'absolute',
-                  top: i === activeIndex ? undefined : 0,
-                  left: i === activeIndex ? undefined : 0,
-                  right: i === activeIndex ? undefined : 0,
-                  width: '100%',
-                }}
-                onClick={() => scrollToIndex(i)}
-              >
+            {plans.map((plan, i) =>
+            <div
+              key={plan.name}
+              className="transition-all duration-500 ease-out"
+              style={{
+                ...getCardStyle(i),
+                position: i === activeIndex ? 'relative' : 'absolute',
+                top: i === activeIndex ? undefined : 0,
+                left: i === activeIndex ? undefined : 0,
+                right: i === activeIndex ? undefined : 0,
+                width: '100%'
+              }}
+              onClick={() => scrollToIndex(i)}>
+              
                 <PlanCard plan={plan} isActive={i === activeIndex} />
               </div>
-            ))}
+            )}
           </div>
 
           {/* Dots indicator */}
           <div className="flex justify-center gap-2 mt-6">
-            {plans.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => scrollToIndex(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                  i === activeIndex
-                    ? "bg-primary scale-125"
-                    : "bg-primary/30"
-                }`}
-              />
-            ))}
+            {plans.map((_, i) =>
+            <button
+              key={i}
+              onClick={() => scrollToIndex(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              i === activeIndex ?
+              "bg-primary scale-125" :
+              "bg-primary/30"}`
+              } />
+
+            )}
           </div>
         </div>
-      </section>
-    );
+      </section>);
+
   }
 
   return (
@@ -226,13 +226,13 @@ const PlansSection = () => {
         </div>
 
         <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
-          {plans.map((plan) => (
-            <PlanCard key={plan.name} plan={plan} isActive />
-          ))}
+          {plans.map((plan) =>
+          <PlanCard key={plan.name} plan={plan} isActive />
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default PlansSection;
