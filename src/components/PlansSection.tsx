@@ -52,7 +52,7 @@ const plans = [
 }];
 
 
-const PlanCard = ({ plan }: {plan: typeof plans[0];isActive?: boolean;}) =>
+const PlanCard = ({ plan, largePrice }: {plan: typeof plans[0];isActive?: boolean;largePrice?: boolean;}) =>
 <div
   className={`relative rounded-3xl p-6 sm:p-8 text-center transition-all duration-500 ${
   plan.featured ?
@@ -71,7 +71,7 @@ const PlanCard = ({ plan }: {plan: typeof plans[0];isActive?: boolean;}) =>
     <p className="font-body text-xs sm:text-sm mb-3 sm:mb-4 text-muted-foreground">{plan.access}</p>
 
     <div className="mb-4 sm:mb-6">
-      <p className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-gradient whitespace-nowrap">{plan.priceNote.replace("ou ", "")}</p>
+      <p className={`font-display text-3xl sm:text-4xl font-bold text-gradient whitespace-nowrap ${largePrice ? 'md:text-6xl' : 'md:text-4xl'}`}>{plan.priceNote.replace("ou ", "")}</p>
       <p className="font-body text-sm text-muted-foreground mt-2 sm:text-xs">ou <span className="font-semibold text-foreground">{plan.price}</span> à vista</p>
     </div>
 
@@ -193,7 +193,7 @@ const PlansSection = () => {
               }}
               onClick={() => scrollToIndex(i)}>
               
-                <PlanCard plan={plan} isActive={i === activeIndex} />
+                <PlanCard plan={plan} isActive={i === activeIndex} largePrice />
               </div>
             )}
           </div>
