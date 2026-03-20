@@ -138,7 +138,7 @@ const PlansSection = () => {
     }
   }, [activeIndex, scrollToIndex]);
 
-  if (isMobile) {
+  if (isTabletOrSmaller) {
     const getCardStyle = (i: number): React.CSSProperties => {
       const diff = i - activeIndex;
       if (diff === 0) {
