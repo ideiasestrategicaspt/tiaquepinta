@@ -52,7 +52,7 @@ const plans = [
 }];
 
 
-const PlanCard = ({ plan }: {plan: typeof plans[0];isActive?: boolean;}) =>
+const PlanCard = ({ plan, largePrice }: {plan: typeof plans[0];isActive?: boolean;largePrice?: boolean;}) =>
 <div
   className={`relative rounded-3xl p-6 sm:p-8 text-center transition-all duration-500 ${
   plan.featured ?
