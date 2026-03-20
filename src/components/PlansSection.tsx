@@ -97,6 +97,15 @@ const PlanCard = ({ plan }: {plan: typeof plans[0];isActive?: boolean;}) =>
 
 const PlansSection = () => {
   const isMobile = useIsMobile();
+  const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
+
+  React.useEffect(() => {
+    const mql = window.matchMedia('(max-width: 1023px)');
+    const onChange = () => setIsTabletOrSmaller(mql.matches);
+    mql.addEventListener('change', onChange);
+    setIsTabletOrSmaller(mql.matches);
+    return () => mql.removeEventListener('change', onChange);
+  }, []);
   const [activeIndex, setActiveIndex] = useState(1); // Essencial starts in center
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef(0);
