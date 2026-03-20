@@ -193,7 +193,7 @@ const PlansSection = () => {
               }}
               onClick={() => scrollToIndex(i)}>
               
-                <PlanCard plan={plan} isActive={i === activeIndex} />
+                <PlanCard plan={plan} isActive={i === activeIndex} largePrice />
               </div>
             )}
           </div>
