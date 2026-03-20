@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { WHATSAPP_PLANO_BASICO, WHATSAPP_PLANO_ESSENCIAL, WHATSAPP_PLANO_VITALICIO } from "@/lib/whatsapp";
 import { Check } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -97,6 +97,15 @@ const PlanCard = ({ plan }: {plan: typeof plans[0];isActive?: boolean;}) =>
 
 const PlansSection = () => {
   const isMobile = useIsMobile();
+  const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 1023px)');
+    const onChange = () => setIsTabletOrSmaller(mql.matches);
+    mql.addEventListener('change', onChange);
+    setIsTabletOrSmaller(mql.matches);
+    return () => mql.removeEventListener('change', onChange);
+  }, []);
   const [activeIndex, setActiveIndex] = useState(1); // Essencial starts in center
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef(0);
@@ -129,7 +138,7 @@ const PlansSection = () => {
     }
   }, [activeIndex, scrollToIndex]);
 
-  if (isMobile) {
+  if (isTabletOrSmaller) {
     const getCardStyle = (i: number): React.CSSProperties => {
       const diff = i - activeIndex;
       if (diff === 0) {
