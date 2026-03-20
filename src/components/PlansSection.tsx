@@ -71,8 +71,8 @@ const PlanCard = ({ plan }: { plan: typeof plans[0]; isActive?: boolean }) => (
     <p className="font-body text-xs sm:text-sm mb-3 sm:mb-4 text-muted-foreground">{plan.access}</p>
 
     <div className="mb-4 sm:mb-6">
-      <p className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">{plan.price}</p>
-      <p className="font-body text-xs sm:text-sm text-muted-foreground mt-1">{plan.priceNote}</p>
+      <p className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">{plan.priceNote.replace("ou ", "")}</p>
+      <p className="font-body text-sm sm:text-base text-muted-foreground mt-2">ou <span className="font-semibold text-foreground">{plan.price}</span> à vista</p>
     </div>
 
     <ul className="text-left space-y-2 mb-5 sm:mb-6 text-xs sm:text-sm">
