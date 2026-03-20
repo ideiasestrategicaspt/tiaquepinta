@@ -99,7 +99,7 @@ const PlansSection = () => {
   const isMobile = useIsMobile();
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const mql = window.matchMedia('(max-width: 1023px)');
     const onChange = () => setIsTabletOrSmaller(mql.matches);
     mql.addEventListener('change', onChange);
