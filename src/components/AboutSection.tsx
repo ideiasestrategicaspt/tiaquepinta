@@ -1,4 +1,5 @@
-import luanaFoto from "@/assets/luana-hero.jpeg";
+import luanaFotoAsset from "@/assets/luana-portrait.jpeg.asset.json";
+const luanaFoto = luanaFotoAsset.url;
 
 const AboutSection = () => {
   return (
