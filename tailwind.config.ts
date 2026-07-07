@@ -7,15 +7,15 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      padding: "1.25rem",
       screens: {
         "2xl": "1200px",
       },
     },
     extend: {
       fontFamily: {
-        display: ["'Baloo 2'", "cursive"],
-        body: ["'Montserrat'", "sans-serif"],
+        display: ["'Playfair Display'", "Georgia", "serif"],
+        body: ["'Inter'", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,13 +51,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          pink: "hsl(var(--brand-pink))",
+          "pink-mid": "hsl(var(--brand-pink-mid))",
+          "pink-light": "hsl(var(--brand-pink-light))",
+          "pink-soft": "hsl(var(--brand-pink-soft))",
+          "pink-accent": "hsl(var(--brand-pink-accent))",
+          purple: "hsl(var(--brand-purple))",
+          dark: "hsl(var(--brand-dark))",
+          wine: "hsl(var(--brand-wine))",
+          black: "hsl(var(--brand-black))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-        xl: "calc(var(--radius) + 4px)",
-        "2xl": "calc(var(--radius) + 8px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
       },
       keyframes: {
         "accordion-down": {
@@ -70,8 +79,8 @@ export default {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.25s ease-out",
+        "accordion-up": "accordion-up 0.25s ease-out",
       },
     },
   },

@@ -1,71 +1,50 @@
-import { WHATSAPP_CURSO } from "@/lib/whatsapp";
-import { Instagram, Youtube } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const FooterSection = () => {
   return (
     <>
-      {/* CTA Final */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-primary via-purple-600 to-secondary relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-2 left-2 md:top-10 md:left-10 text-2xl md:text-5xl animate-float">⭐</div>
-          <div className="absolute top-2 right-2 md:bottom-20 md:right-20 text-2xl md:text-4xl animate-float" style={{ animationDelay: "1s" }}>🎨</div>
-          <div className="absolute bottom-2 right-2 md:top-1/2 md:right-10 text-2xl md:text-3xl animate-float" style={{ animationDelay: "0.5s" }}>✨</div>
-          <div className="absolute bottom-2 left-2 md:top-20 md:right-1/3 text-2xl md:text-3xl animate-float" style={{ animationDelay: "0.8s" }}>🖌️</div>
-          <div className="hidden md:block absolute bottom-1/3 left-1/4 text-3xl animate-float" style={{ animationDelay: "1.3s" }}>🎈</div>
-          <div className="hidden md:block absolute bottom-10 left-1/3 text-3xl animate-float" style={{ animationDelay: "0.3s" }}>🎉</div>
+      {/* Final CTA */}
+      <section className="section gradient-dark relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full opacity-30 blur-3xl"
+            style={{
+              background:
+                "radial-gradient(circle, hsl(var(--brand-pink) / 0.3) 0%, transparent 70%)",
+            }}
+          />
         </div>
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            Comece hoje e transforme sua paixão em renda
-          </h2>
-          <p className="font-body text-white/80 text-lg mb-8 max-w-xl mx-auto">
-            Junte-se a mais de 300 alunas que já estão vivendo de pintura facial. Vagas limitadas para turma 2026!
-          </p>
-          <a
-            href={WHATSAPP_CURSO}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-cta btn-cta-lg btn-cta-pulse animate-micro-bounce inline-flex items-center gap-3"
-          >
-            🎨 Quero viver de pintura facial
-          </a>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6 text-balance">
+              Sua arte pode se tornar sua principal fonte de renda
+            </h2>
+            <p className="text-white/75 text-base md:text-lg mb-10 leading-relaxed">
+              Junte-se às mais de 300 alunas que já estão vivendo de pintura facial.
+            </p>
+            <a href="#precos" className="btn-primary text-base py-4 px-8">
+              Quero entrar no Método VDPF
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground py-10">
+      <footer className="bg-brand-black py-10">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="text-white font-display font-bold text-lg">T</span>
-              </div>
-              <p className="font-display text-xl font-bold text-background">Tia que Pinta</p>
-            </div>
-            
-            <div className="flex items-center gap-6">
-              <a href="https://instagram.com/tiaquepinta" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-background/70 hover:text-white transition-colors group">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Instagram className="w-5 h-5" />
-                </div>
-              </a>
-              <a href="https://tiktok.com/@tiaquepinta" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-background/70 hover:text-white transition-colors group">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors font-bold text-sm">
-                  TT
-                </div>
-              </a>
-              <a href="https://youtube.com/@tiaquepinta" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-background/70 hover:text-white transition-colors group">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Youtube className="w-5 h-5" />
-                </div>
-              </a>
-            </div>
-            
-            <p className="font-body text-sm text-background/50">
-              © 2026 Tia que Pinta. Todos os direitos reservados.
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+            <p className="text-white/50">
+              © 2026 Tia que Pinta — Luana Moreira · Vila Velha, ES
             </p>
+            <a
+              href="https://instagram.com/tiaquepinta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[#F472B6] hover:text-white transition-colors"
+            >
+              <Instagram className="w-4 h-4" />
+              @tiaquepinta
+            </a>
           </div>
         </div>
       </footer>

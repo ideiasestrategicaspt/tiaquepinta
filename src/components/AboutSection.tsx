@@ -1,46 +1,49 @@
-import cursoVdpfAvatar from "@/assets/curso-vdpf-avatar.jpeg";
-import luanaSemFundo from "@/assets/luana-sem-fundo.png";
-import { PaintSplash } from "./PaintEffects";
+import luanaFoto from "@/assets/luana-hero.jpeg";
 
 const AboutSection = () => {
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-br from-purple-50/80 via-background to-blue-50/60 overflow-hidden">
-      {/* Decorative elements */}
-      <PaintSplash className="absolute -top-6 -right-6 w-48 h-48 animate-splash-in" gradient={{ from: "#F855B0", to: "#FFA5A9" }} />
-      <PaintSplash className="absolute -bottom-8 -left-8 w-40 h-40 animate-splash-in" style={{ animationDelay: "0.4s" }} gradient={{ from: "#00A3EB", to: "#95B2D1" }} />
-      <div className="absolute top-2 right-2 md:top-12 md:right-[6%] text-xl md:text-4xl animate-float" style={{ animationDelay: "0.3s" }}>🎨</div>
-      <div className="absolute bottom-2 left-2 md:bottom-14 md:left-[5%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1s" }}>✨</div>
-      <div className="absolute top-2 left-2 md:top-1/3 md:left-[3%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
-      <div className="absolute bottom-2 right-2 md:bottom-1/3 md:right-[4%] text-lg md:text-2xl animate-float" style={{ animationDelay: "1.3s" }}>🖌️</div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-10 max-w-4xl mx-auto">
-          <div className="flex-shrink-0">
-            <img
-              src={cursoVdpfAvatar}
-              alt="Luana Moreira - Tia que Pinta"
-              className="block md:hidden w-48 h-48 rounded-2xl object-cover shadow-card" />
-            
-            <img
-              src={luanaSemFundo}
-              alt="Logo Tia que Pinta"
-              className="hidden md:block w-56 h-56 rounded-2xl object-contain shadow-card" />
-            
+    <section id="sobre" className="section" style={{ background: "hsl(var(--brand-pink-soft))" }}>
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
+          {/* Image */}
+          <div className="relative order-1 md:order-none">
+            <div className="relative rounded-2xl overflow-hidden shadow-elevated aspect-[4/5] max-w-[480px] mx-auto md:mx-0">
+              <img
+                src={luanaFoto}
+                alt="Luana Moreira - Tia que Pinta"
+                className="w-full h-full object-cover"
+              />
+              {/* Substituir imagem em src/assets/luana-hero.jpeg */}
+            </div>
+            {/* Experience badge */}
+            <div className="absolute -bottom-4 -right-2 md:-right-4 bg-brand-pink text-white rounded-2xl px-5 py-3 shadow-pink">
+              <p className="font-display text-2xl md:text-3xl font-semibold leading-none">+12 anos</p>
+              <p className="text-[11px] uppercase tracking-widest opacity-90 mt-1">de experiência</p>
+            </div>
           </div>
+
+          {/* Content */}
           <div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient mb-4">
-              Quem é a Tia que Pinta
+            <span className="pill-tag mb-5">Quem é a Tia que Pinta</span>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-6 leading-tight text-balance">
+              Prazer, sou Luana Moreira
             </h2>
-            <p className="font-body text-foreground/80 text-lg leading-relaxed mb-4">
-              <strong>Luana Moreira</strong> é artista especializada em pintura facial infantil desde 2012 em Vila Velha – ES.
-            </p>
-            <p className="font-body text-foreground/80 text-lg leading-relaxed mb-4">
-              Criadora da <strong>Comunidade Somos os Artistas</strong> e <strong>Método VDPF – Vivendo de Pintura Facial</strong>, que ensina pessoas a aprender pintura facial do zero e transformar essa habilidade em uma fonte de renda trabalhando em festas e eventos.
-            </p>
+            <div className="space-y-5 text-foreground/75 text-base md:text-lg leading-relaxed">
+              <p>
+                Artista lúdica, educadora e criadora do Método VDPF — Vivendo de Pintura Facial. Desde 2012, atuo como artista especializada em pintura facial infantil em Vila Velha — ES, com mais de 1.000 festas e eventos no currículo.
+              </p>
+              <p>
+                Ao longo dos anos, percebi que muitas pessoas queriam aprender, mas não sabiam por onde começar. Criei o Método VDPF para resolver exatamente isso: um caminho claro, do básico ao avançado, para quem quer aprender a arte e transformá-la em uma fonte de renda real.
+              </p>
+              <p>
+                Hoje, mais de 300 alunas já passaram pelo método — e muitas delas estão trabalhando em festas todo fim de semana.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </section>);
+    </section>
+  );
 };
 
 export default AboutSection;
