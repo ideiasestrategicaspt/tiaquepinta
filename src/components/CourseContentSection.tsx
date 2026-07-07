@@ -1,56 +1,54 @@
-import { Video, BookOpen, FolderOpen, MessageCircle, Award, Package } from "lucide-react";
-import { PaintSplash, BrushStroke } from "./PaintEffects";
+import { Check, Gift } from "lucide-react";
 
-const benefits = [
-  { icon: Video, title: "Mais de 50 aulas gravadas" },
-  { icon: BookOpen, title: "Apostila completa" },
-  { icon: FolderOpen, title: "Portfólio de apoio" },
-  { icon: MessageCircle, title: "Grupo exclusivo no WhatsApp" },
-  { icon: Award, title: "Certificado de participação" },
-  { icon: Package, title: "Dicas de materiais" },
-];
-
-const bonuses = [
-  "🎁 Aula de pintura gestacional",
-  "🎁 Aula de bola mania",
+const items = [
+  { title: "Mais de 50 aulas gravadas", text: "Acesso imediato, assista quando e onde quiser." },
+  { title: "Apostila completa", text: "Material de apoio atualizado." },
+  { title: "Portfólio de pinturas", text: "Referências visuais para praticar." },
+  { title: "Placas de treino", text: "Exercícios para desenvolver a técnica." },
+  { title: "Lista de atividades", text: "Roteiro de prática para evoluir." },
+  { title: "Certificado de participação", text: "Documento que comprova sua formação." },
+  { title: "Bônus: Pintura Gestacional", text: "Aula exclusiva com técnicas especiais.", bonus: true },
+  { title: "Bônus: Bola Mania", text: "Escultura com balões para ampliar serviços.", bonus: true },
 ];
 
 const CourseContentSection = () => {
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-b from-background via-purple-50/40 to-background overflow-hidden">
-      {/* Paint effects */}
-      <PaintSplash className="absolute -top-8 -left-10 w-48 h-48 animate-splash-in" gradient={{ from: "#00A3EB", to: "#96B8CB" }} />
-      <BrushStroke className="absolute bottom-12 right-0 w-72" gradient={{ from: "#FFC235", to: "#F0CA61" }} />
-      <PaintSplash className="absolute -bottom-6 -right-6 w-40 h-40 animate-splash-in" style={{ animationDelay: "0.6s" }} gradient={{ from: "#DE70D2", to: "#FFA5A9" }} />
-      <div className="absolute top-2 left-2 md:top-10 md:left-[4%] text-xl md:text-4xl animate-float">🖌️</div>
-      <div className="absolute top-2 right-2 md:top-16 md:right-[5%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.7s" }}>⭐</div>
-      <div className="absolute bottom-2 right-2 md:bottom-14 md:right-[4%] text-xl md:text-3xl animate-float" style={{ animationDelay: "1.2s" }}>✨</div>
-      <div className="absolute bottom-2 left-2 md:bottom-20 md:left-[5%] text-xl md:text-3xl animate-float" style={{ animationDelay: "0.5s" }}>🎨</div>
-      <div className="hidden lg:block absolute top-1/2 right-[3%] text-2xl animate-float" style={{ animationDelay: "1.5s" }}>🎈</div>
+    <section className="section bg-brand-black">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-gradient mb-10">
-          O que está incluso no curso
-        </h2>
-
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 max-w-4xl mx-auto mb-12">
-          {benefits.map((b, i) => (
-            <div key={i} className="bg-card rounded-2xl p-4 sm:p-6 shadow-card text-center">
-              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full gradient-hero flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <b.icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary-foreground" />
-              </div>
-              <span className="font-body font-semibold text-foreground text-sm sm:text-base leading-tight">{b.title}</span>
-            </div>
-          ))}
+        <div className="max-w-2xl mx-auto text-center mb-14">
+          <span className="pill-tag-dark mb-5">Tudo incluso</span>
+          <h2 className="font-display text-3xl md:text-5xl font-semibold text-white mb-4 leading-tight text-balance">
+            O que você recebe ao entrar no Método VDPF
+          </h2>
         </div>
 
-        {/* Bonuses */}
-        <div className="max-w-md mx-auto gradient-warm rounded-2xl p-8 text-center shadow-card">
-          <h3 className="font-display text-2xl font-bold text-primary-foreground mb-4">Bônus Exclusivos</h3>
-          <div className="space-y-3">
-            {bonuses.map((b, i) => (
-              <p key={i} className="font-body text-lg text-primary-foreground/90 font-medium">{b}</p>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-4xl mx-auto">
+          {items.map((it, i) => (
+            <div
+              key={i}
+              className="rounded-xl p-5 md:p-6 flex gap-4"
+              style={{
+                background: "rgba(255,255,255,0.06)",
+                border: "1px solid rgba(255,255,255,0.1)",
+              }}
+            >
+              <div className="flex-shrink-0">
+                {it.bonus ? (
+                  <div className="w-8 h-8 rounded-lg bg-[#F472B6]/20 flex items-center justify-center">
+                    <Gift className="w-4 h-4 text-[#F472B6]" />
+                  </div>
+                ) : (
+                  <div className="w-8 h-8 rounded-lg bg-[#F472B6]/20 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-[#F472B6]" />
+                  </div>
+                )}
+              </div>
+              <div>
+                <p className="font-medium text-white mb-1">{it.title}</p>
+                <p className="text-sm text-white/60 leading-relaxed">{it.text}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

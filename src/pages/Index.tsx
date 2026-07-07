@@ -1,69 +1,33 @@
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import StatsBar from "@/components/StatsBar";
 import AboutSection from "@/components/AboutSection";
+import ObjectionsSection from "@/components/ObjectionsSection";
 import MethodSection from "@/components/MethodSection";
 import CourseContentSection from "@/components/CourseContentSection";
 import PlansSection from "@/components/PlansSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import GallerySection from "@/components/GallerySection";
 import EventsSection from "@/components/EventsSection";
-import PdfSection from "@/components/PdfSection";
+import FaqSection from "@/components/FaqSection";
 import FooterSection from "@/components/FooterSection";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import SectionDivider from "@/components/SectionDivider";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
     <main className="overflow-hidden">
+      <Navbar />
       <HeroSection />
-      <SectionDivider variant="paint" className="text-purple-50/80" shadow />
+      <StatsBar />
 
-      <ScrollReveal variant="fade-up">
-        <AboutSection />
-      </ScrollReveal>
-
-      <SectionDivider variant="paint" className="text-purple-50/80" flip shadow />
-      <SectionDivider variant="wave" className="text-muted" shadow />
-
-      <ScrollReveal variant="fade-up" delay={100}>
-        <MethodSection />
-      </ScrollReveal>
-
-      <SectionDivider variant="blob" className="text-background" />
-
-      <ScrollReveal variant="fade-up" delay={100}>
-        <CourseContentSection />
-      </ScrollReveal>
-
-      <SectionDivider variant="paint" className="text-muted" />
-
-      <ScrollReveal variant="zoom-in">
-        <PlansSection />
-      </ScrollReveal>
-
-      <SectionDivider variant="wave" className="text-blue-50/50" />
-
-      <ScrollReveal variant="fade-up">
-        <TestimonialsSection />
-      </ScrollReveal>
-
-      <SectionDivider variant="blob" className="text-muted" />
-
-      <ScrollReveal variant="fade-up" delay={100}>
-        <PdfSection />
-      </ScrollReveal>
-
-      <SectionDivider variant="paint" className="text-muted" />
-
-      <ScrollReveal variant="fade-up">
-        <GallerySection />
-      </ScrollReveal>
-
-      <SectionDivider variant="wave" className="text-purple-50" />
-
-      <ScrollReveal variant="fade-up">
-        <EventsSection />
-      </ScrollReveal>
+      <ScrollReveal variant="fade-up"><AboutSection /></ScrollReveal>
+      <ScrollReveal variant="fade-up"><ObjectionsSection /></ScrollReveal>
+      <ScrollReveal variant="fade-up"><MethodSection /></ScrollReveal>
+      <ScrollReveal variant="fade-up"><CourseContentSection /></ScrollReveal>
+      <ScrollReveal variant="fade-up"><PlansSection /></ScrollReveal>
+      <ScrollReveal variant="fade-up"><TestimonialsSection /></ScrollReveal>
+      <ScrollReveal variant="fade-up"><EventsSection /></ScrollReveal>
+      <ScrollReveal variant="fade-up"><FaqSection /></ScrollReveal>
 
       <FooterSection />
       <FloatingWhatsApp />
