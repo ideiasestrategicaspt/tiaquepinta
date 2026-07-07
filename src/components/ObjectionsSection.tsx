@@ -4,7 +4,7 @@ const items = [
   {
     icon: Brush,
     title: "Não sei desenhar",
-    text: "O método foi desenvolvido para quem começa do zero. Você aprende técnicas simples que não exigem habilidade prévia em desenho — apenas prática guiada.",
+    text: "O método foi desenvolvido para quem começa do zero. Você aprende técnicas simples que não exigem habilidade prévia em desenho, apenas prática guiada.",
   },
   {
     icon: Clock,
