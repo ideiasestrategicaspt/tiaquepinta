@@ -7,5 +7,5 @@ export const WHATSAPP_CURSO = whatsappLink("Olá! Quero saber mais sobre o curso
 export const WHATSAPP_FESTA = whatsappLink("Olá! Quero contratar pintura facial para festa 🎉");
 export const WHATSAPP_PDF = whatsappLink("Olá! Quero os PDFs para iniciantes 📚");
 export const WHATSAPP_PLANO_BASICO = whatsappLink("Olá! Quero entrar no Curso Básico - Método VDPF 🎨");
-export const WHATSAPP_PLANO_ESSENCIAL = whatsappLink("Olá! Quero entrar no Curso Essencial - Método VDPF 🎨");
+export const WHATSAPP_PLANO_ESSENCIAL = whatsappLink("Olá! Quero entrar no Curso Método VDPF 🎨");
 export const WHATSAPP_PLANO_VITALICIO = whatsappLink("Olá! Quero entrar no Curso Vitalício - Método VDPF 🎨");
