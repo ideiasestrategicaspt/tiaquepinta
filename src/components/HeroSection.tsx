@@ -1,3 +1,4 @@
+import { WHATSAPP_CURSO, WHATSAPP_FESTA } from "@/lib/whatsapp";
 import { Star } from "lucide-react";
 
 const HeroSection = () => {
@@ -36,10 +37,20 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
-            <a href="#precos" className="btn-primary">
+            <a
+              href={WHATSAPP_CURSO}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               Quero entrar no curso
             </a>
-            <a href="#eventos" className="btn-outline-white">
+            <a
+              href={WHATSAPP_FESTA}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline-white"
+            >
               Contratar para evento
             </a>
           </div>

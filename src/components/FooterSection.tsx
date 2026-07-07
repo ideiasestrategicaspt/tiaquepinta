@@ -1,3 +1,4 @@
+import { WHATSAPP_PLANO_ESSENCIAL } from "@/lib/whatsapp";
 import { Instagram } from "lucide-react";
 
 const FooterSection = () => {
@@ -22,7 +23,12 @@ const FooterSection = () => {
             <p className="text-white/75 text-base md:text-lg mb-10 leading-relaxed">
               Junte-se às mais de 300 alunas que já estão vivendo de pintura facial.
             </p>
-            <a href="#precos" className="btn-primary text-base py-4 px-8">
+            <a
+              href={WHATSAPP_PLANO_ESSENCIAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-base py-4 px-8"
+            >
               Quero entrar no Método VDPF
             </a>
           </div>
