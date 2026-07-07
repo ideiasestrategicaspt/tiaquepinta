@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { WHATSAPP_CURSO } from "@/lib/whatsapp";
+import { useEffect, useState } from "react"; 
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,7 +21,12 @@ const Navbar = () => {
         <a href="#top" className="font-display text-xl md:text-2xl font-bold text-brand-pink tracking-tight">
           Tia que Pinta
         </a>
-        <a href="#precos" className="btn-primary text-xs md:text-sm py-2.5 md:py-3 px-5 md:px-6">
+        <a
+          href={WHATSAPP_CURSO}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary text-xs md:text-sm py-2.5 md:py-3 px-5 md:px-6"
+        >
           Quero aprender <span aria-hidden>→</span>
         </a>
       </div>
