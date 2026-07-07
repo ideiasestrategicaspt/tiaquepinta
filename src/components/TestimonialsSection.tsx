@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
                 {t.text}
               </blockquote>
               <figcaption className="font-medium text-foreground text-sm">
-                — {t.name}
+                {t.name}
               </figcaption>
             </figure>
           ))}
