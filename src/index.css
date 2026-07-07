@@ -114,24 +114,27 @@
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-medium text-sm sm:text-base transition-all duration-300;
     background: hsl(var(--brand-pink));
     color: white;
-    box-shadow: 0 8px 24px -8px hsl(var(--brand-pink) / 0.5);
+    box-shadow: 0 14px 30px -8px hsl(var(--brand-pink) / 0.65), 0 4px 10px -2px hsl(var(--brand-dark) / 0.25);
   }
   .btn-primary:hover {
-    background: hsl(var(--brand-pink) / 0.92);
-    transform: translateY(-1px);
-    box-shadow: 0 12px 32px -8px hsl(var(--brand-pink) / 0.6);
+    background: hsl(var(--brand-pink) / 0.94);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -10px hsl(var(--brand-pink) / 0.75), 0 6px 14px -4px hsl(var(--brand-dark) / 0.3);
   }
 
   /* Outline CTA (on dark bg) */
   .btn-outline-white {
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-medium text-sm sm:text-base transition-all duration-300;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.04);
     color: white;
-    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.55);
   }
   .btn-outline-white:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.6);
   }
 
   .btn-ghost-dark {
@@ -141,12 +144,12 @@
   }
   .btn-ghost-dark:hover { background: hsl(var(--brand-pink-light)); }
 
-  /* Section base */
+  /* Section base — lighter mobile rhythm */
   .section {
-    @apply py-20 md:py-28;
+    @apply py-14 md:py-28;
   }
   .section-narrow {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-24;
   }
 }
 
