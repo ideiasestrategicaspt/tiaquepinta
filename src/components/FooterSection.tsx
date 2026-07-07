@@ -40,7 +40,7 @@ const FooterSection = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
             <p className="text-white/50">
-              © 2026 Tia que Pinta — Luana Moreira · Vila Velha, ES
+              © 2026 Tia que Pinta · Luana Moreira · Vila Velha, ES
             </p>
             <a
               href="https://instagram.com/tiaquepinta"

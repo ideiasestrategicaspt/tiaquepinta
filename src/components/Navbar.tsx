@@ -17,17 +17,18 @@ const Navbar = () => {
         scrolled ? "bg-white/95 backdrop-blur-md shadow-soft" : "bg-white/80 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
-        <a href="#top" className="font-display text-xl md:text-2xl font-bold text-brand-pink tracking-tight">
+      <div className="container mx-auto flex items-center justify-between h-14 md:h-20 px-4">
+        <a href="#top" className="font-display text-lg md:text-2xl font-bold text-brand-pink tracking-tight">
           Tia que Pinta
         </a>
         <a
           href={WHATSAPP_CURSO}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary text-xs md:text-sm py-2.5 md:py-3 px-5 md:px-6"
+          className="btn-primary text-xs md:text-sm py-2 md:py-3 px-4 md:px-6"
         >
-          Quero aprender <span aria-hidden>→</span>
+          <span className="md:hidden">Quero aprender</span>
+          <span className="hidden md:inline">Quero aprender →</span>
         </a>
       </div>
     </header>

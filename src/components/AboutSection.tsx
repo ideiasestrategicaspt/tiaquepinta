@@ -1,4 +1,5 @@
-import luanaFoto from "@/assets/luana-hero.jpeg";
+import luanaFotoAsset from "@/assets/luana-portrait.jpeg.asset.json";
+const luanaFoto = luanaFotoAsset.url;
 
 const AboutSection = () => {
   return (
@@ -30,13 +31,10 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-5 text-foreground/75 text-base md:text-lg leading-relaxed">
               <p>
-                Artista lúdica, educadora e criadora do Método VDPF — Vivendo de Pintura Facial. Desde 2012, atuo como artista especializada em pintura facial infantil em Vila Velha — ES, com mais de 1.000 festas e eventos no currículo.
+                Artista lúdica e criadora do Método VDPF (Vivendo de Pintura Facial). Desde 2012, atuo com pintura facial infantil em Vila Velha, ES, com mais de 1.000 festas realizadas.
               </p>
               <p>
-                Ao longo dos anos, percebi que muitas pessoas queriam aprender, mas não sabiam por onde começar. Criei o Método VDPF para resolver exatamente isso: um caminho claro, do básico ao avançado, para quem quer aprender a arte e transformá-la em uma fonte de renda real.
-              </p>
-              <p>
-                Hoje, mais de 300 alunas já passaram pelo método — e muitas delas estão trabalhando em festas todo fim de semana.
+                Mais de 300 alunas já passaram pelo método e hoje trabalham em festas todo fim de semana.
               </p>
             </div>
           </div>

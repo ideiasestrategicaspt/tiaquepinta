@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Comecei do zero e em três meses já estava atendendo festas. O suporte da Luana faz toda a diferença — nunca me senti sozinha.",
+    text: "Comecei do zero e em três meses já estava atendendo festas. O suporte da Luana faz toda a diferença. Nunca me senti sozinha.",
     name: "Camila Santos",
   },
   {
@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
                 {t.text}
               </blockquote>
               <figcaption className="font-medium text-foreground text-sm">
-                — {t.name}
+                {t.name}
               </figcaption>
             </figure>
           ))}

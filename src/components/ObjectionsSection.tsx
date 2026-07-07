@@ -4,7 +4,7 @@ const items = [
   {
     icon: Brush,
     title: "Não sei desenhar",
-    text: "O método foi desenvolvido para quem começa do zero. Você aprende técnicas simples que não exigem habilidade prévia em desenho — apenas prática guiada.",
+    text: "O método foi desenvolvido para quem começa do zero. Você aprende técnicas simples que não exigem habilidade prévia em desenho, apenas prática guiada.",
   },
   {
     icon: Clock,
@@ -33,7 +33,7 @@ const ObjectionsSection = () => {
             Você não precisa de experiência.<br className="hidden md:block" /> Precisa do método certo.
           </h2>
           <p className="text-foreground/70 text-base md:text-lg leading-relaxed">
-            Os obstáculos que impedem a maioria de começar — e como o Método resolve cada um.
+            Os obstáculos que impedem a maioria de começar, e como o Método resolve cada um.
           </p>
         </div>
 

@@ -14,7 +14,7 @@ const MethodSection = () => {
         <div className="max-w-2xl mx-auto text-center mb-14">
           <span className="pill-tag mb-5">O Método VDPF</span>
           <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-4 leading-tight text-balance">
-            Do básico ao avançado — com um caminho claro
+            Do básico ao avançado, com um caminho claro
           </h2>
           <p className="text-foreground/70 text-base md:text-lg leading-relaxed">
             O Método VDPF cobre tudo o que você precisa para aprender pintura facial do zero e começar a trabalhar em festas e eventos.

@@ -48,7 +48,7 @@ const EventsSection = () => {
             Verificar disponibilidade no WhatsApp
           </a>
           <p className="text-white/55 text-xs md:text-sm mt-5">
-            Vila Velha — ES · Agenda 2026 aberta · +1.000 festas realizadas
+            Vila Velha, ES · Agenda 2026 aberta · +1.000 festas realizadas
           </p>
         </div>
       </div>

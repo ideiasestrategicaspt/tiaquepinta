@@ -31,7 +31,7 @@ const PlansSection = () => {
           style={{ border: "2px solid hsl(var(--brand-pink))" }}
         >
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-pink text-white px-5 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider whitespace-nowrap">
-            Método VDPF — Completo
+            Método VDPF · Completo
           </div>
 
           <div className="text-center mb-8 pt-2">

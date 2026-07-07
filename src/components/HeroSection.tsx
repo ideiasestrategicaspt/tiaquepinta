@@ -21,19 +21,18 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
           <span className="pill-tag-dark mb-6">
-            Método VDPF — Vivendo de Pintura Facial
+            Método VDPF · Vivendo de Pintura Facial
           </span>
 
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6 text-balance">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.05] mb-5 text-balance">
             Aprenda Pintura Facial e Transforme Essa Arte em{" "}
             <em className="not-italic italic text-[#F472B6] font-medium">
               Renda de Verdade
             </em>
           </h1>
 
-          <p className="font-body text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
-            Mais de 300 artistas já aprenderam com o Método VDPF e hoje trabalham em festas e eventos pelo Brasil.
-            Você pode ser a próxima.
+          <p className="font-body text-sm md:text-lg text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
+            Mais de 300 artistas já aprenderam com o Método VDPF e hoje trabalham em festas e eventos pelo Brasil. Você pode ser a próxima.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
