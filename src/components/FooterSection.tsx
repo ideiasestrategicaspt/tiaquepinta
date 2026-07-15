@@ -23,14 +23,25 @@ const FooterSection = () => {
             <p className="text-white/75 text-base md:text-lg mb-10 leading-relaxed">
               Junte-se às mais de 300 alunas que já estão vivendo de pintura facial.
             </p>
-            <a
-              href={EDUZZ_CHECKOUT}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary text-base py-4 px-8"
-            >
-              Quero entrar no Método VDPF
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={EDUZZ_CHECKOUT}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-base py-4 px-8"
+              >
+                Quero entrar no Método VDPF
+              </a>
+              <a
+                href={WHATSAPP_DUVIDA}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary text-base py-4 px-8 inline-flex items-center gap-2"
+              >
+                <HelpCircle className="w-5 h-5" />
+                Ainda tenho dúvidas
+              </a>
+            </div>
           </div>
         </div>
       </section>
