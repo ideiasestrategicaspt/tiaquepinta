@@ -1,5 +1,5 @@
-import { WHATSAPP_CURSO, WHATSAPP_DUVIDA } from "@/lib/whatsapp";
-import { HelpCircle, MessageCircle } from "lucide-react";
+import { WHATSAPP_DUVIDA } from "@/lib/whatsapp";
+import { HelpCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const FloatingWhatsApp = () => {
