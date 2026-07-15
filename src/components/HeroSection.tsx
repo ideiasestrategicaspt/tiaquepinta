@@ -1,4 +1,4 @@
-import { WHATSAPP_CURSO, WHATSAPP_FESTA } from "@/lib/whatsapp";
+import { EDUZZ_CHECKOUT, WHATSAPP_FESTA } from "@/lib/whatsapp";
 import { Star } from "lucide-react";
 
 const HeroSection = () => {
@@ -37,7 +37,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
             <a
-              href={WHATSAPP_CURSO}
+              href={EDUZZ_CHECKOUT}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

@@ -1,5 +1,5 @@
-import { WHATSAPP_CURSO } from "@/lib/whatsapp";
-import { MessageCircle } from "lucide-react";
+import { WHATSAPP_CURSO, WHATSAPP_DUVIDA } from "@/lib/whatsapp";
+import { HelpCircle, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const FloatingWhatsApp = () => {
@@ -20,28 +20,54 @@ const FloatingWhatsApp = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const bottomClass = nearFooter ? "bottom-24 md:bottom-8" : "bottom-4 md:bottom-6";
+
   return (
-    <a
-      href={WHATSAPP_CURSO}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Fale conosco no WhatsApp"
-      className={`fixed z-50 group transition-all duration-300 ${
+    <div
+      className={`fixed z-50 flex flex-col-reverse items-end gap-3 transition-all duration-300 right-4 md:right-6 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-      } ${nearFooter ? "bottom-24 md:bottom-8" : "bottom-4 md:bottom-6"} right-4 md:right-6`}
+      } ${bottomClass}`}
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
-      <span
-        className="relative w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#25D366] flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
-        style={{
-          boxShadow:
-            "0 14px 36px -8px rgba(37,211,102,0.55), 0 6px 16px -4px rgba(0,0,0,0.25)",
-        }}
+      <a
+        href={WHATSAPP_CURSO}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Fale conosco no WhatsApp"
+        className="group relative"
       >
-        <MessageCircle className="w-6 h-6 md:w-8 md:h-8 text-white fill-white" />
-      </span>
-    </a>
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
+        <span
+          className="relative w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#25D366] flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+          style={{
+            boxShadow:
+              "0 14px 36px -8px rgba(37,211,102,0.55), 0 6px 16px -4px rgba(0,0,0,0.25)",
+          }}
+        >
+          <MessageCircle className="w-6 h-6 md:w-8 md:h-8 text-white fill-white" />
+        </span>
+      </a>
+
+      <a
+        href={WHATSAPP_DUVIDA}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Tenho uma dúvida sobre o Método VDPF"
+        className="group relative"
+      >
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
+        <span
+          className="relative w-12 h-12 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+          style={{
+            boxShadow:
+              "0 14px 36px -8px rgba(37,211,102,0.55), 0 6px 16px -4px rgba(0,0,0,0.25)",
+            border: "2px solid #25D366",
+          }}
+        >
+          <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-[#25D366]" />
+        </span>
+      </a>
+    </div>
   );
 };
 
