@@ -22,9 +22,7 @@ const Navbar = () => {
           Tia que Pinta
         </a>
         <a
-          href={WHATSAPP_CURSO}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#precos"
           className="btn-primary text-xs md:text-sm py-2 md:py-3 px-4 md:px-6"
         >
           <span className="md:hidden">Quero aprender</span>
