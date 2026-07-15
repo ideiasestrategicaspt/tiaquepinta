@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import { WHATSAPP_PLANO_ESSENCIAL } from "@/lib/whatsapp";
+import { EDUZZ_CHECKOUT } from "@/lib/whatsapp";
 
 const includedItems = [
   "Mais de 50 aulas gravadas",
@@ -39,7 +39,7 @@ const PlansSection = () => {
             <div className="flex items-baseline justify-center gap-2 mb-2">
               <span className="text-lg text-foreground/70">12x de</span>
               <span className="font-display text-6xl md:text-7xl font-semibold text-brand-pink leading-none">
-                R$ 25
+                R$ 20,83
               </span>
             </div>
             <p className="text-sm text-foreground/60">ou R$ 250 à vista</p>
@@ -55,7 +55,7 @@ const PlansSection = () => {
           </ul>
 
           <a
-            href={WHATSAPP_PLANO_ESSENCIAL}
+            href={EDUZZ_CHECKOUT}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary w-full text-center justify-center py-4 text-base"

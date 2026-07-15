@@ -1,4 +1,4 @@
-import { WHATSAPP_PLANO_ESSENCIAL } from "@/lib/whatsapp";
+import { EDUZZ_CHECKOUT } from "@/lib/whatsapp";
 import { Instagram } from "lucide-react";
 
 const FooterSection = () => {
@@ -24,7 +24,7 @@ const FooterSection = () => {
               Junte-se às mais de 300 alunas que já estão vivendo de pintura facial.
             </p>
             <a
-              href={WHATSAPP_PLANO_ESSENCIAL}
+              href={EDUZZ_CHECKOUT}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-base py-4 px-8"
