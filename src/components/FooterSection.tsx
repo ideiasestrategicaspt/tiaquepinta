@@ -36,7 +36,7 @@ const FooterSection = () => {
                 href={WHATSAPP_DUVIDA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary text-base py-4 px-8 inline-flex items-center gap-2"
+                className="btn-outline-white text-base py-4 px-8"
               >
                 <HelpCircle className="w-5 h-5" />
                 Ainda tenho dúvidas
