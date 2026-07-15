@@ -1,5 +1,5 @@
-import { EDUZZ_CHECKOUT } from "@/lib/whatsapp";
-import { Instagram } from "lucide-react";
+import { EDUZZ_CHECKOUT, WHATSAPP_DUVIDA } from "@/lib/whatsapp";
+import { HelpCircle, Instagram } from "lucide-react";
 
 const FooterSection = () => {
   return (
