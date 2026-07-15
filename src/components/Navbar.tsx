@@ -1,4 +1,4 @@
-import { WHATSAPP_CURSO } from "@/lib/whatsapp";
+
 import { useEffect, useState } from "react"; 
 
 const Navbar = () => {
