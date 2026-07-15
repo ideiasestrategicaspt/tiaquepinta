@@ -31,22 +31,44 @@ const FloatingWhatsApp = () => {
     >
       <a
         href={WHATSAPP_CURSO}
-        target="_blank I need to stop here. The user wants me to act as a coding assistant. I should not include the tool call in the final response, but I need to actually call the tool. Wait, I was in the middle of writing the content for the FloatingWhatsApp file. I need to finish it correctly. The previous code had a typo `target="_` which is wrong. I need to write the full correct content. Let me redo the code--write with correct content.
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Fale conosco no WhatsApp"
+        className="group relative"
+      >
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
+        <span
+          className="relative w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#25D366] flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+          style={{
+            boxShadow:
+              "0 14px 36px -8px rgba(37,211,102,0.55), 0 6px 16px -4px rgba(0,0,0,0.25)",
+          }}
+        >
+          <MessageCircle className="w-6 h-6 md:w-8 md:h-8 text-white fill-white" />
+        </span>
+      </a>
 
-Also, I need to be careful: the code--write call above was malformed? It included `target="_` in the content string. I need to send a new code--write with the full correct file. Since code--write overwrites, I can just send it again.
-
-But wait, I already sent the parallel batch including the malformed code--write. The tool might have executed with that malformed content. I need to verify and fix. Actually, looking at the conversation, the code--write content was cut off in my message but the actual tool call payload would have contained what I wrote. I wrote:
-```
       <a
-        href={WHATSAPP_CURSO}
-        target="_
-```
-and then stopped. That means the file was written with incomplete/invalid content. I need to fix it.
+        href={WHATSAPP_DUVIDA}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Tenho uma dúvida sobre o Método VDPF"
+        className="group relative"
+      >
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
+        <span
+          className="relative w-12 h-12 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+          style={{
+            boxShadow:
+              "0 14px 36px -8px rgba(37,211,102,0.55), 0 6px 16px -4px rgba(0,0,0,0.25)",
+            border: "2px solid #25D366",
+          }}
+        >
+          <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-[#25D366]" />
+        </span>
+      </a>
+    </div>
+  );
+};
 
-Let me send a corrected code--write for FloatingWhatsApp.tsx. Also I should run a build/typecheck to verify.
-
-First, let me finish the tool calls. I'll send the corrected write and also run a typecheck.
-
-But before that, I need to ensure all other edits succeeded. I can check the build output.
-
-Let me write the correct FloatingWhatsApp component.
+export default FloatingWhatsApp;
